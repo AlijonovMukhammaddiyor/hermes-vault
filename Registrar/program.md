@@ -13,5 +13,5 @@ Registrar owns scheduling, GPA, transcript, prerequisites, standing. Does NOT te
 ## Standing: GPA<2.5 → probation (remediation week, no new material). ≥3.7 → honors (harder tiers/faster pace).
 ## Anti-fatigue (never violate): ≤4 tasks/day, 1 rest day/week, debt cap 6 pauses new work.
 
-## MVP note (2026-07-06): CS250 is the only ACTIVE course this pass. CS301/CS270/PD101 exist in
-   state.json + curriculum but are inactive until their activation weeks / a later build pass.
+## Active courses (as of 2026-07-06): CS250, CS301, CS270 (all `active:true` in state.json).
+   PD101 activates W9. A course is active when `state.courses.<C>.active` is true.
