@@ -1,0 +1,38 @@
+{
+ "streak": {
+  "current": 0,
+  "longest": 0,
+  "last_completed_date": null
+ },
+ "debt": [],
+ "gpa": null,
+ "standing": "good",
+ "week": 1,
+ "phase": "M1",
+ "courses": {
+  "CS250": {
+   "unit": "arrays-hashing",
+   "index": 0,
+   "grades": [],
+   "active": true
+  },
+  "CS301": {
+   "unit": "fundamentals",
+   "grades": [],
+   "active": true
+  },
+  "CS270": {
+   "unit": "architectures",
+   "grades": [],
+   "active": true
+  },
+  "PD101": {
+   "active": false,
+   "grades": []
+  }
+ },
+ "gates": {
+  "midterm": null,
+  "finals": null
+ }
+}

@@ -1,38 +1,86 @@
 {
- "streak": {
-  "current": 0,
-  "longest": 0,
-  "last_completed_date": null
- },
- "debt": [],
- "gpa": null,
- "standing": "good",
- "week": 1,
- "phase": "M1",
- "courses": {
-  "CS250": {
-   "unit": "arrays-hashing",
-   "index": 0,
-   "grades": [],
-   "active": true
+  "schema_version": 3,
+  "program": {
+    "total_semesters": 2,
+    "weeks_per_semester": 12,
+    "started_on": "2026-07-06"
   },
-  "CS301": {
-   "unit": "fundamentals",
-   "grades": [],
-   "active": true
+  "position": {
+    "semester": 1,
+    "week_in_semester": 1,
+    "absolute_week": 1,
+    "phase": "foundations"
   },
-  "CS270": {
-   "unit": "architectures",
-   "grades": [],
-   "active": true
+  "gpa": {
+    "semester": null,
+    "cumulative": null
   },
-  "PD101": {
-   "active": false,
-   "grades": []
-  }
- },
- "gates": {
-  "midterm": null,
-  "finals": null
- }
+  "standing": "good",
+  "streak": {
+    "current": 0,
+    "longest": 0,
+    "last_completed_date": null
+  },
+  "learner": {
+    "name": "Mukhammaddiyor",
+    "timezone": "Asia/Tashkent",
+    "persona_stage": "guide"
+  },
+  "courses": {
+    "CS250": {
+      "title": "Data Structures & Algorithms",
+      "credits": 4,
+      "runs_in": [
+        1,
+        2
+      ],
+      "active": true,
+      "unit": "arrays-hashing",
+      "unit_index": 0,
+      "activates_week": null
+    },
+    "CS270": {
+      "title": "AI Agents",
+      "credits": 2,
+      "runs_in": [
+        1,
+        2
+      ],
+      "active": true,
+      "unit": "foundations",
+      "unit_index": 0,
+      "activates_week": null
+    },
+    "CS301": {
+      "title": "System Design",
+      "credits": 4,
+      "runs_in": [
+        1,
+        2
+      ],
+      "active": true,
+      "unit": "fundamentals",
+      "unit_index": 0,
+      "activates_week": null
+    },
+    "PD101": {
+      "title": "Behavioral",
+      "credits": 2,
+      "runs_in": [
+        1,
+        2
+      ],
+      "active": false,
+      "unit": "story-mining",
+      "unit_index": 0,
+      "activates_week": 9
+    }
+  },
+  "assessments": {
+    "s1_midterm": null,
+    "s1_finals": null,
+    "s2_midterm": null,
+    "s2_finals": null
+  },
+  "history": []
 }
