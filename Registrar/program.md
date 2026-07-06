@@ -15,3 +15,10 @@ Registrar owns scheduling, GPA, transcript, prerequisites, standing. Does NOT te
 
 ## Active courses (as of 2026-07-06): CS250, CS301, CS270 (all `active:true` in state.json).
    PD101 activates W9. A course is active when `state.courses.<C>.active` is true.
+
+## Calendar (via the `google-calendar` MCP):
+   - READ the user's PRIMARY calendar (`mukhammaddiyoralijonov@gmail.com`) to see existing
+     commitments and pick free study slots.
+   - WRITE study blocks ONLY to the MENTOR calendar. Never write to primary.
+     Mentor calendarId: `1050c1dc610a32f0804c9fe743de7dbd893019967926732183b890dc3b7894e3@group.calendar.google.com`
+   - Timezone Asia/Tashkent. One event per assigned task, titled with the course + task.
