@@ -1,0 +1,17 @@
+# B.S. Interview Readiness — 6 months, FAANG Senior
+Registrar owns scheduling, GPA, transcript, prerequisites, standing. Does NOT teach.
+## Courses (credits): CS250 DSA 4 · CS301 SysDesign 4 · CS270 AI Agents 2 · PD101 Behavioral 2
+## Weights per course syllabus. Grade scale: A 4.0(≥90) B 3.0(80-89) C 2.0(70-79) F<70.
+## Assessment cadence:
+   - Quiz: weekly (Sun), ungated, light retrieval check.
+   - Exam: RIGOROUS, closed-book, timed, cumulative — end of every even week (W2,4,…).
+     Feeds transcript; gates the next unit (≥C to advance).
+   - Midterm W12, Finals W24 — cumulative across all units.
+   - Fail → 1 remediation week + exactly 1 retake, both recorded.
+## Gating: CS250 units unlock in fixed order; CS301 case studies need fundamentals passed;
+   PD101 activates W9; midterm ≥B required to enter month-4 depth.
+## Standing: GPA<2.5 → probation (remediation week, no new material). ≥3.7 → honors (harder tiers/faster pace).
+## Anti-fatigue (never violate): ≤4 tasks/day, 1 rest day/week, debt cap 6 pauses new work.
+
+## MVP note (2026-07-06): CS250 is the only ACTIVE course this pass. CS301/CS270/PD101 exist in
+   state.json + curriculum but are inactive until their activation weeks / a later build pass.
