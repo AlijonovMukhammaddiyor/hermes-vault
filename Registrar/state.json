@@ -26,56 +26,7 @@
     "timezone": "Asia/Tashkent",
     "persona_stage": "guide"
   },
-  "courses": {
-    "CS250": {
-      "title": "Data Structures & Algorithms",
-      "credits": 4,
-      "runs_in": [
-        1,
-        2
-      ],
-      "active": true,
-      "unit": "arrays-hashing",
-      "unit_index": 0,
-      "activates_week": null
-    },
-    "CS270": {
-      "title": "AI Agents",
-      "credits": 2,
-      "runs_in": [
-        1,
-        2
-      ],
-      "active": true,
-      "unit": "foundations",
-      "unit_index": 0,
-      "activates_week": null
-    },
-    "CS301": {
-      "title": "System Design",
-      "credits": 4,
-      "runs_in": [
-        1,
-        2
-      ],
-      "active": true,
-      "unit": "fundamentals",
-      "unit_index": 0,
-      "activates_week": null
-    },
-    "PD101": {
-      "title": "Behavioral",
-      "credits": 2,
-      "runs_in": [
-        1,
-        2
-      ],
-      "active": false,
-      "unit": "story-mining",
-      "unit_index": 0,
-      "activates_week": 9
-    }
-  },
+  "courses": {},
   "assessments": {
     "s1_midterm": null,
     "s1_finals": null,
