@@ -1,4 +1,4 @@
-# Curriculum — 24 Weeks (CS250 spine + CS301 + CS270)
+# Curriculum — 24 Weeks (CS250 spine + CS301)
 
 Rules: ≤4 tasks/day, 1 rest day/week (default Sun review counts as light). Exams end every EVEN
 week (gate next unit, ≥C). Midterm W12, Finals W24. PD101 activates W9.
@@ -7,11 +7,10 @@ Daily ≤4-task budget is split across active courses by weight:
 - **CS250 (weight 4)** — 1–2 problems/day + pattern note; spine below drives the unit each week.
 - **CS301 (weight 4)** — ~1 design/week + a reading; units Fundamentals→Core→Case studies→Mocks
   advance ~1 unit/month (W1-4 Fundamentals, W5-8 Core, W9-16 Case studies, W17-24 Mocks).
-- **CS270 (weight 2)** — ~1 grounded note or applied Rizo GO task/week; units
-  Architectures(M1)→Eval/observability(M2)→RAG/context(M3)→Applied(M4+). Needs `Uploads/CS270/`.
+
 
 Sun = quiz (odd wk) or exam (even wk), cumulative across active courses in scope.
-The CS250 week-by-week below is the spine; CS301/CS270 ride the monthly cadence above.
+The CS250 week-by-week below is the spine; CS301 rides the monthly cadence above.
 
 ## Month 1 — foundations
 - W1 Arrays & Hashing (Easy→Med). Sun: quiz.

@@ -36,18 +36,7 @@
   "history": [],
   "enrollment": {
     "credit_cap": 14,
-    "records": [
-      {
-        "code": "CS270",
-        "enrolled_on": "",
-        "dropped_on": null
-      },
-      {
-        "code": "CS270",
-        "enrolled_on": "",
-        "dropped_on": null
-      }
-    ]
+    "records": []
   },
   "hold": null,
   "degree": {

@@ -1,6 +1,6 @@
 # B.S. Interview Readiness — 6 months, FAANG Senior
 Registrar owns scheduling, GPA, transcript, prerequisites, standing. Does NOT teach.
-## Courses (credits): CS250 DSA 4 · CS301 SysDesign 4 · CS270 AI Agents 2 · PD101 Behavioral 2
+## Courses (credits): CS250 DSA 4 · CS301 SysDesign 4 · PD101 Behavioral 2
 ## Weights per course syllabus. Grade scale: A 4.0(≥90) B 3.0(80-89) C 2.0(70-79) F<70.
 ## Assessment cadence:
    - Quiz: weekly (Sun), ungated, light retrieval check.
@@ -13,7 +13,7 @@ Registrar owns scheduling, GPA, transcript, prerequisites, standing. Does NOT te
 ## Standing: GPA<2.5 → probation (remediation week, no new material). ≥3.7 → honors (harder tiers/faster pace).
 ## Anti-fatigue (never violate): ≤4 tasks/day, 1 rest day/week, debt cap 6 pauses new work.
 
-## Active courses (as of 2026-07-06): CS250, CS301, CS270 (all `active:true` in state.json).
+## Active courses (as of 2026-07-06): CS250, CS301 (all `active:true` in state.json).
    PD101 activates W9. A course is active when `state.courses.<C>.active` is true.
 
 ## Calendar (via the `google-calendar` MCP):

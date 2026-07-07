@@ -21,11 +21,6 @@
    "grades": [],
    "active": true
   },
-  "CS270": {
-   "unit": "architectures",
-   "grades": [],
-   "active": true
-  },
   "PD101": {
    "active": false,
    "grades": []
