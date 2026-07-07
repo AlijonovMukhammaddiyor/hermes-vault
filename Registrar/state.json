@@ -26,7 +26,14 @@
     "timezone": "Asia/Tashkent",
     "persona_stage": "guide"
   },
-  "courses": {},
+  "courses": {
+    "CS270": {
+      "status": "active",
+      "enrolled_on": "2026-07-07",
+      "credits": 4,
+      "activates_week": 1
+    }
+  },
   "assessments": {
     "s1_midterm": null,
     "s1_finals": null,
