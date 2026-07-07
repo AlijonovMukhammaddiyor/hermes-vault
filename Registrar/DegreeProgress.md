@@ -1,4 +1,4 @@
-# 🧭 Degree Progress — B.S. Interview Readiness — FAANG Senior
+# 🧭 Degree Progress — Hermes University Certificate of Mastery
 
 **Requirement:** pass finals of both 3-month semesters (≥B).
 
