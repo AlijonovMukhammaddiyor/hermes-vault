@@ -26,19 +26,33 @@
     "timezone": "Asia/Tashkent",
     "persona_stage": "guide"
   },
-  "courses": {
-    "CS270": {
-      "status": "active",
-      "enrolled_on": "2026-07-07",
-      "credits": 4,
-      "activates_week": 1
-    }
-  },
+  "courses": {},
   "assessments": {
     "s1_midterm": null,
     "s1_finals": null,
     "s2_midterm": null,
     "s2_finals": null
   },
-  "history": []
+  "history": [],
+  "enrollment": {
+    "credit_cap": 14,
+    "records": [
+      {
+        "code": "CS270",
+        "enrolled_on": "",
+        "dropped_on": null
+      },
+      {
+        "code": "CS270",
+        "enrolled_on": "",
+        "dropped_on": null
+      }
+    ]
+  },
+  "hold": null,
+  "degree": {
+    "name": "Hermes University Certificate of Mastery",
+    "requirement": "pass finals of both 3-month semesters (>=B)",
+    "awarded_on": null
+  }
 }
