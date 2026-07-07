@@ -1,25 +1,35 @@
-# CS270 — AI Agents (2 credits)  ·  self-updates monthly
+# CS270 — AI Agents
 
-## Outcomes
-Design, evaluate, and ship LLM agents at a senior bar: pick architectures deliberately, build
-eval/observability, engineer context/RAG, and apply it to real Rizo GO work.
+> Design, evaluate, and ship an LLM agent at a senior bar: pick an architecture deliberately, build eval/observability for it, engineer its context/RAG, and apply it to real Rizo GO work.
 
-## Sources (textbook)
-- The user's own **LLM book** (parsed chapters in `Uploads/CS270/`).
-- **Anthropic engineering blog** — context engineering, building effective agents.
-- **DeepLearning.AI** short courses + key papers.
-- Monthly: professor searches for new agent-engineering material and revises the current unit.
+**Credits:** 2  ·  **Domain:** ai-agents  ·  **Prereqs:** none
 
-## Units (unlock in order)
-1. Architectures — patterns (tool-use, routing, reflection, planning), when each fits.
-2. Eval & observability — offline/online eval, judges, tracing, regression batteries.
-3. RAG & context — retrieval, chunking, context windows, grounding, context-rot mitigation.
-4. Applied (Rizo GO) — ship or improve a real agent feature at work.
+## Enduring understandings
+- Start with the simplest thing that works; add agentic autonomy only when it demonstrably helps.
+- The augmented LLM (retrieval + tools + memory) is the atomic building block.
+- An agent you can't evaluate you can't improve — the eval harness is part of the design.
 
-## Grade weights
-Applied 40 · Quiz 30 · Teach-back 30.
+## Grading policy
+hw 40% · quiz 30% · finals 30%
 
-## Proof of work
-A **RAG-grounded note** in `Courses/CS270/notes/<topic>.md` (grounded in `Uploads/CS270/` sources,
-cited) **plus** a concrete **Rizo GO application** (what you'd change / did change and why).
-Feynman teach-back is a core proof mode: gaps get re-taught, not marked.
+## Units & outcomes (the schedule)
+
+### Sem 1 · Unit 1: Foundations — prompting, structured output, tool/function calling
+- **apply** — Build an augmented LLM (prompt + structured output + tool call) and explain each part.
+  - *proof:* Builds an augmented-LLM (prompt+structured output+tool call) with a grounded note + Rizo GO tie-in
+
+### Sem 1 · Unit 2: Workflow Patterns — chaining, routing, parallelization, orchestrator-workers, evaluator-optimizer
+- **evaluate** — Select among the 5 Anthropic workflow patterns for a task and justify the trade-off.
+  - *proof:* Chooses among the 5 Anthropic workflow patterns for a task and defends why (teach-back)
+
+### Sem 1 · Unit 3: Context Engineering — budgeting, tool-result compaction, memory
+- **analyze** — Diagnose and fix a context problem (budget/compaction/memory) for an agent.
+  - *proof:* RAG-grounded note on context budgeting/compaction/memory + Rizo GO application
+
+### Sem 1 · Unit 4: RAG & Context — naive → advanced → agentic retrieval
+- **create** — Build and evaluate a RAG pipeline, improving grounded answer quality with a measured metric.
+  - *proof:* Builds/evaluates a RAG pipeline (naive→advanced) with a grounded note + measured result
+
+### Sem 1 · Unit 5: Semester 1 Finals (applied + teach-back)
+- **create** — Ship an applied agent improvement for Rizo GO and teach back the S1 concepts, closed-book.
+  - *proof:* Applied agent deliverable for Rizo GO + conceptual teach-back across S1 units (closed-book)
