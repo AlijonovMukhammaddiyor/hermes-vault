@@ -9,12 +9,12 @@
 - **Enroll:** reply `enroll CS250`
 
 ## CS270 — AI Agents  ·  2 credits
-*Design, evaluate, and ship an LLM agent at a senior bar: pick an architecture deliberately, build eval/observability for it, engineer its context/RAG, and apply it to real Rizo GO work.*
+*Design, evaluate, and ship an LLM agent at a senior bar: pick the right architecture for the task, build evals and observability for it, engineer its context as a finite resource, and apply it to real production work. Then teach back the full conceptual arc closed-book.*
 
-This course builds the core competency of a senior AI engineer: designing, building, and evaluating LLM-powered systems that do real work. Semester 1 moves from the atomic building block — the augmented LLM (prompt + structured output + tool calling) — through Anthropic's five workflow patterns, context engineering as a finite-resource discipline, and production RAG (naïve to agentic). Every unit is assessed through grounded, cited work tied to the learner's real Rizo GO production system. Anchored on Chip Huyen's AI Engineering and the learner's own copy of Hands-On Large Language Models, supplemented by Anthropic's engineering blog (Building Effective Agents, Effective Context Engineering) and the UC Berkeley LLM Agents MOOC. Designed for a KAIST CS graduate targeting FAANG senior in months — no toy examples, no vibes.
+This course builds the core competency of a senior AI engineer: designing, building, and evaluating LLM-powered systems that do real work. Semester 1 moves from the atomic building block — the augmented LLM (prompt + structured output + tool calling) — through Anthropic's five workflow patterns, context engineering as a finite-resource discipline, and production RAG (naive to agentic). Every unit is assessed through grounded, cited work tied to the learner's real production system. Anchored on Chip Huyen's AI Engineering and the learner's own copy of Hands-On Large Language Models, supplemented by Anthropic's engineering blog (Building Effective Agents, Effective Context Engineering, Demystifying Evals) and the UC Berkeley LLM Agents MOOC. Designed for a KAIST CS graduate targeting FAANG senior in months.
 
 - **Prerequisites:** none
-- **Units (5):** Foundations — prompting, structured output, tool/function calling → Workflow Patterns — chaining, routing, parallelization, orchestrator-workers, evaluator-optimizer → Context Engineering — budgeting, tool-result compaction, memory → RAG & Context — naive → advanced → agentic retrieval → Semester 1 Finals (applied + teach-back)
+- **Units (5):** Foundations — prompting, structured output, tool/function calling → Workflow Patterns — chaining, routing, parallelization, orchestrator-workers, evaluator-optimizer → Context Engineering — budgeting, tool-result compaction, memory → RAG & Context — naive to advanced to agentic retrieval → Semester 1 Finals (applied + teach-back)
 - **Primary text:** AI Engineering: Building Applications with Foundation Models
 - **Grading:** hw 40% · quiz 30% · finals 30%
 - **Enroll:** reply `enroll CS270`
