@@ -26,26 +26,7 @@
     "timezone": "Asia/Tashkent",
     "persona_stage": "guide"
   },
-  "courses": {
-    "CS270": {
-      "title": "AI Engineering",
-      "credits": 2,
-      "runs_in": [
-        1,
-        2
-      ],
-      "active": true,
-      "unit": "foundations",
-      "unit_index": 0,
-      "activates_week": null,
-      "grade_weights": {
-        "hw": 0.4,
-        "quiz": 0.3,
-        "finals": 0.3
-      },
-      "enrolled_on": null
-    }
-  },
+  "courses": {},
   "assessments": {
     "s1_midterm": null,
     "s1_finals": null,
