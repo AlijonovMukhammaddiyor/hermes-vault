@@ -1,4 +1,5 @@
-# Transcript
-| Course | Unit | HW% | Quiz% | Exam | Grade | Cr | Status |
-|--|--|--|--|--|--|--|--|
-Cumulative GPA: —  ·  Standing: good
+# 🎓 Transcript — Mukhammaddiyor
+
+**Standing:** good  ·  **Semester GPA:** —  ·  **Cumulative GPA:** —
+
+_Not enrolled in any course yet._
