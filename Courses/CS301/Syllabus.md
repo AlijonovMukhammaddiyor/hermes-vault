@@ -12,9 +12,9 @@
 ## Grading policy
 hw 40% · quiz 15% · exam 10% · midterm 15% · finals 20%
 
-## Units & outcomes (the schedule)
+## Weekly schedule, outcomes & readings
 
-### Sem 1 · Unit 1: Fundamentals — delivery framework, BOTEC, CAP, storage, caching, consistency
+### Sem 1 · Week 1 · Fundamentals — delivery framework, BOTEC, CAP, storage, caching, consistency
 - **apply** — Apply the 6-step delivery framework (requirements→entities→API→HLD→deep dive) to scope a prompt in time.
   - *proof:* Applies the 6-step delivery framework to scope an assigned prompt within time
 - **analyze** — Perform a back-of-envelope capacity estimate (QPS, storage, bandwidth) for a system.
@@ -22,18 +22,27 @@ hw 40% · quiz 15% · exam 10% · midterm 15% · finals 20%
 - **evaluate** — Justify a CAP/PACELC + consistency choice for a given workload.
   - *proof:* Justifies a CAP/PACELC + consistency choice for a given workload, defended
 
-### Sem 1 · Unit 2: Core Components — LB, queues, DBs, sharding, replication, CDN
+### Sem 1 · Week 2 · Core Components — LB, queues, DBs, sharding, replication, CDN
 - **evaluate** — Select and justify core components (SQL/NoSQL, cache, queue, sharding, replication) for a scenario.
   - *proof:* Selects DB type/cache/queue/sharding for a scenario and defends the trade-off
 
-### Sem 1 · Unit 3: Key Technologies — Redis, Kafka, Cassandra, Elasticsearch, API Gateway
+### Sem 1 · Week 3 · Key Technologies — Redis, Kafka, Cassandra, Elasticsearch, API Gateway
 - **analyze** — Map a technology (Redis/Kafka/Cassandra/ES/API-gateway) to the problem it solves and its trade-offs.
   - *proof:* Maps a technology (Redis/Kafka/Cassandra/ES) to when-and-why it fits
 
-### Sem 1 · Unit 4: Case Studies I — design real systems end-to-end
+### Sem 1 · Week 4 · Case Studies I — design real systems end-to-end
 - **create** — Produce a full HLD for a case-study system (URL shortener, rate limiter, news feed, chat) with BOTEC + a defended trade-off + failure modes.
   - *proof:* Full design doc: requirements + BOTEC + HLD + >=1 defended trade-off + failure modes
 
-### Sem 1 · Unit 5: Semester 1 Finals (cumulative)
+### Sem 1 · Week 5 · Semester 1 Finals (cumulative)
 - **create** — Design an unseen system end-to-end under time, defended on trade-offs with a correct BOTEC, closed-book.
   - *proof:* 1 timed full design of an unseen system, defended on trade-offs with BOTEC (closed-book)
+
+## Assessment plan
+- **a.fnd.framework** (summative, worked-completion, ≥apply) — Applies the 6-step delivery framework to scope an assigned prompt within time
+- **a.fnd.botec** (summative, open_problem, ≥analyze) — Produces a correct BOTEC (QPS, storage, bandwidth) for an assigned system
+- **a.fnd.cap** (summative, explain, ≥evaluate) — Justifies a CAP/PACELC + consistency choice for a given workload, defended
+- **a.core.select** (summative, open_problem, ≥evaluate) — Selects DB type/cache/queue/sharding for a scenario and defends the trade-off
+- **a.tech.fit** (formative, explain, ≥analyze) — Maps a technology (Redis/Kafka/Cassandra/ES) to when-and-why it fits
+- **a.case.design** (summative, project, ≥create) — Full design doc: requirements + BOTEC + HLD + >=1 defended trade-off + failure modes
+- **a.s1.final** (summative, project, ≥create) — 1 timed full design of an unseen system, defended on trade-offs with BOTEC (closed-book)
