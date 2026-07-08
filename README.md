@@ -1,16 +1,21 @@
-# Hermes University — Vault
+# Your Hermes University vault
 
-Source of truth for the personal-university program (records + proof + notes).
-Owned by the `hermes` user so the agent can read/write it.
+This folder **is** your university — the syllabus, your task board, your transcript. The agent writes
+to it and it syncs to your phone/desktop via **Obsidian Git**.
 
-- `Registrar/` — program, curriculum, state.json, transcript, learner-model (Registrar-owned data).
-- `Courses/<C>/` — syllabus, lessons/, per course. CS250 active (MVP); others activate later.
-- `Uploads/<C>/` — parsed book chapters for DeepSeek long-context grounding.
-- `Concepts/patterns|behavioral/` — pattern notes / STAR stories (proof artifacts).
-- `Daily/YYYY-MM-DD.md` — append-only daily notes (## Assigned / ## Proof / ## Log).
-- `Exams/` — quiz & exam records. `SRS/pending.jsonl` — queued Anki cards (Anki deferred).
+## Install these Obsidian community plugins
+- **Kanban** — renders `Board.md` as your task board (your daily workspace). Drag a card to **Done**
+  when you finish it; the night audit verifies the proof and records it.
+- **Dataview** — powers `Dashboard.md`.
+- **Obsidian Git** — two-way sync with the agent. It auto-commits/pulls; when you edit, pull first.
 
-**Behavior** (registrar / examiner / cs250-professor skills) lives in Hermes skills at
-`~/.hermes/skills/hermes-university/`, NOT in this vault. This vault is data only.
-
-After any write: `git -C /home/hermes/vault add -A && git commit -m "<what>" && git push`.
+## What's here
+- **`Board.md`** — your Kanban task board.
+- **`Dashboard.md`** — at-a-glance status.
+- **`Catalog.md`** — available courses.
+- **`Courses/<CODE>/`** — `Syllabus.md` (the full course) · `Resources.md` · `MyPlan.md` (your
+  personalized, placement-pruned track).
+- **`Registrar/`** — `Transcript.md`, `Schedule.md`, `DegreeProgress.md` (engine-rendered; read-only).
+- **`Daily/`** — your daily notes.
+- **`Uploads/<CODE>/`** — drop your Claude Deep Research reports + any course materials here.
+- **`Exams/`**, **`SRS/`** — assessments and spaced-repetition source.
