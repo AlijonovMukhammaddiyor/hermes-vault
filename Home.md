@@ -1,18 +1,20 @@
 # 🏛️ Home — Mukhammaddiyor
 
-**Semester 1 · Week 1/12**  ·  Standing: good
+> [!abstract] Where you are
+> Semester 1 · Week 1/12 · Standing: good
 
-## Your courses
-- **AI Agent Engineering** — 🎯 placement
+## 📚 Courses
+| Course | Status | Mastery |
+|---|---|---|
+| **AI Agent Engineering** | 🎯 placement | — |
 
-## Blocked on you
-_Nothing — you're all caught up._
+> [!success] You're all caught up
+> Nothing is waiting on you right now.
 
-## To review (slipping — proven before, refresh it)
-- REV.test1
+> [!question] To review — proven before, refresh it
+> - REV.test1
 
-## Cards
-- **0** queued for Anki · 2 created all-time
+> [!note] Anki: **0** queued · 2 created · 1 to review
 
 ---
-[[Board]] · [[Catalog]] · [[Registrar/Transcript|Transcript]] · [[Registrar/DegreeProgress|Degree Progress]] · [[Registrar/Schedule|Schedule]]
+[[Board]] · [[Catalog]] · [[Guide]] · [[Registrar/Transcript|Transcript]] · [[Registrar/DegreeProgress|Degree Progress]] · [[Registrar/Schedule|Schedule]]
