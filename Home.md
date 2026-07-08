@@ -3,10 +3,12 @@
 > [!abstract] Where you are
 > Semester 1 · Week 1/12 · Standing: good
 
+> [!tip] Today's reads → [[Briefing/2026-07-08|2026-07-08]]
+
 ## 📚 Courses
-| Course                   | Status       | Mastery |
-| ------------------------ | ------------ | ------- |
-| **AI Agent Engineering** | 🎯 placement | —       |
+| Course | Status | Mastery |
+|---|---|---|
+| **AI Agent Engineering** | 🎯 placement | — |
 
 > [!success] You're all caught up
 > Nothing is waiting on you right now.
