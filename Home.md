@@ -3,7 +3,7 @@
 **Semester 1 · Week 1/12**  ·  Standing: good
 
 ## Your courses
-_No courses yet. Message the bot `create course <your goal>` to begin._
+- **AI Agent Engineering** — 🎯 placement
 
 ## Blocked on you
 _Nothing — you're all caught up._

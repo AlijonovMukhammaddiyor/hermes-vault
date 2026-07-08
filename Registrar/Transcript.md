@@ -2,4 +2,6 @@
 
 **Standing:** good  ·  **Semester GPA:** —  ·  **Cumulative GPA:** —
 
-_Not enrolled in any course yet._
+| Course | Credits | Records | Course GPA |
+|---|---|---|---|
+| AG201 — AI Agent Engineering | 4 | 0 | — |

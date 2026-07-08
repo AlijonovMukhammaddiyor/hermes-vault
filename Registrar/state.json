@@ -26,7 +26,30 @@
     "timezone": "Asia/Tashkent",
     "persona_stage": "guide"
   },
-  "courses": {},
+  "courses": {
+    "AG201": {
+      "title": "AI Agent Engineering",
+      "credits": 4,
+      "runs_in": [
+        1,
+        2
+      ],
+      "active": true,
+      "unit": "u1-python",
+      "unit_index": 0,
+      "activates_week": null,
+      "grade_weights": {
+        "hw": 0.4,
+        "quiz": 0.15,
+        "exam": 0.15,
+        "midterm": 0.1,
+        "finals": 0.2
+      },
+      "enrolled_on": null,
+      "status": "placement",
+      "archived_on": null
+    }
+  },
   "assessments": {
     "s1_midterm": null,
     "s1_finals": null,
@@ -36,7 +59,13 @@
   "history": [],
   "enrollment": {
     "credit_cap": 14,
-    "records": []
+    "records": [
+      {
+        "code": "AG201",
+        "enrolled_on": "",
+        "dropped_on": null
+      }
+    ]
   },
   "hold": null,
   "degree": {
