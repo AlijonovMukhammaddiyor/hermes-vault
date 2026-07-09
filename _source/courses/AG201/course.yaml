@@ -1,0 +1,1045 @@
+id: AG201
+title: AI Agent Engineering
+subject_domain: ai-engineering
+credits: 4
+north_star: >
+  Design, build, evaluate, and deploy production-grade AI agent systems — from a single ReAct loop
+  to multi-agent orchestrations — with the architectural judgment of a staff-level engineer.
+description: >
+  From scratch to frontier: a 24-week, two-semester course that builds every layer of AI agent
+  engineering. Starts with Python and LLM fundamentals (transformers, attention, prompting), then
+  constructs the full agent stack layer by layer — structured output, tool use, agent loops,
+  context engineering, RAG, multi-agent orchestration, code-execution agents, and production
+  deployment. Evaluation and observability are threaded throughout, not deferred. Grounded in
+  primary research (Anthropic, Cognition, Manus, Berkeley LLM Agents MOOC) and anchored by
+  Jurafsky & Martin SLP3 plus Chip Huyen's AI Engineering. Graduates ship a portfolio-grade
+  agent system and can defend architecture choices with quantitative reasoning about cost,
+  latency, and reliability.
+
+audience:
+  good_fit:
+    - "Comfortable with Python basics (functions, dicts, list comprehensions) and eager to go deep — this course builds the agent stack from the metal up. You want to understand WHY, not just wire frameworks."
+    - "You have 3h/day to commit and are willing to implement things from scratch before reaching for abstractions. The bar is staff-level engineering thinking."
+  not_a_fit:
+    - "Already shipping production agent systems at scale and reading COLM papers weekly — you may want a more targeted deep-dive (e.g., the Berkeley Advanced LLM Agents MOOC directly)."
+    - "Looking for a framework-wiring tutorial (LangChain/CrewAI quickstart). This course builds from first principles — you'll use frameworks later, but only after you can rebuild them."
+    - "No Python experience at all — start with DeepLearning.AI's 'AI Python for Beginners' first, then come back."
+
+prerequisites: []
+enduring_understandings:
+  - "The LLM is the reasoning core; tools are its arms; structured output is its reliable communication protocol. Every agent architecture is a composition of these three primitives."
+  - "Evaluation is not a final step — it is the engine of improvement. The #1 differentiator between competent and excellent agent engineers is disciplined eval and error analysis."
+  - "Context engineering — KV-cache economics, compaction, externalized memory, preserving failures — is where reliability is won or lost, not prompt polishing."
+  - "Architecture follows task structure. Multi-agent wins for parallelizable, independent subtasks. Single-agent or deterministic pipelines win for tightly coupled work. Know when not to add agentic complexity."
+  - "The Bitter Lesson applies at the application layer: scaffolding that models can internalize will be obsolete. Build harnesses that survive model upgrades."
+  - "Compound errors in agentic systems mean minor issues can derail entire runs. Observability, checkpointing, and graceful error recovery are not optional — they are the system."
+  - "The goal is not to wire a framework — it is to understand the architecture deeply enough to rebuild it when the framework changes."
+
+primary_text:
+  type: textbook
+  title: "Speech and Language Processing (3rd ed. draft)"
+  author: "Dan Jurafsky & James H. Martin"
+  url: "https://web.stanford.edu/~jurafsky/slp3/"
+  locator: "ch. 9-12 (transformers, LLMs, prompting, fine-tuning, RLHF, RAG, agents)"
+  why: "The canonical, free, continuously updated NLP/LLM reference — chapters 9-12 cover the full LLM stack that agents are built on."
+  tier: core
+  cost: free
+
+resources:
+  - type: textbook
+    title: "AI Engineering"
+    author: "Chip Huyen"
+    url: "https://www.oreilly.com/library/view/ai-engineering/9781098166309/"
+    locator: "whole (evals ch. 5-7, RAG ch. 8-9, agents ch. 10-12, deployment ch. 13-15)"
+    why: "The practitioner's textbook for building LLM applications end-to-end — bridges theory to production."
+    tier: core
+    cost: paid
+  - type: textbook
+    title: "Hands-On Large Language Models"
+    author: "Jay Alammar & Maarten Grootendorst"
+    url: "https://www.oreilly.com/library/view/hands-on-large-language/9781098150952/"
+    locator: "whole"
+    why: "Visual, code-first companion — builds transformer/attention intuition through implementation."
+    tier: supplementary
+    cost: paid
+  - type: course
+    title: "UC Berkeley CS294/194-196: Large Language Model Agents"
+    author: "Dawn Song, Xinyun Chen"
+    url: "https://llmagents-learning.org/"
+    locator: "Lectures 1-14 (full MOOC)"
+    why: "The definitive academic agent course — guest lectures from the researchers who defined the field."
+    tier: core
+    cost: free
+  - type: course
+    title: "Stanford CS336: Language Modeling from Scratch"
+    author: "Percy Liang, et al."
+    url: "https://cs336.stanford.edu/"
+    locator: "Lectures 1-10"
+    why: "Build an LLM end-to-end — deepest possible foundation for understanding what agents run on."
+    tier: supplementary
+    cost: free
+
+professor_profile:
+  persona: >
+    A senior agent engineer who has built and shipped production agent systems. Direct, no fluff,
+    allergic to framework-worship. Speaks in architecture diagrams and eval metrics, not hype.
+    Pushes the learner to understand WHY before reaching for WHAT — reads source code, studies
+    failure modes, measures everything. Deeply respects the craft of building reliable systems
+    on unreliable foundations.
+  teaching_stance: >
+    Concept-first, build-second, evaluate-third. Every new idea starts with the mental model
+    (diagram + primary source), then a minimal implementation from scratch (no framework on first
+    pass), then an eval that proves it works. Faded scaffolding: heavily guided on foundations,
+    increasingly independent as the learner builds agency. Wrong answers get targeted micro-lessons
+    on the exact misconception, then re-testing. Every unit connects back to a real production
+    system the learner is studying (Anthropic, Manus, Cognition, Fin).
+  common_misconceptions:
+    - "Agents are just LLMs with tools wired in — the real complexity is context management, error recovery, and eval, not the wiring."
+    - "Multi-agent is always better — in reality, single-agent beats multi-agent for tightly coupled work, and multi-agent's cost (15× tokens) must be justified by the task structure."
+    - "You need LangChain/CrewAI to build agents — the best engineers build directly against APIs first, add framework abstraction only when it earns its place."
+    - "Prompt engineering is tweaking wording — it's programming in natural language: structured output schemas, few-shot selection, system-message architecture."
+    - "Eval can wait until the end — eval is the engine of improvement and must be built alongside the agent from day one."
+    - "KV-cache is an infra detail — KV-cache hit rate is the single most important metric for production agent cost and latency."
+
+  assessment_philosophy: >
+    Excellent means the learner can (a) build the thing from scratch without a framework, (b) explain
+    every architectural decision with quantitative reasoning (cost, latency, reliability), (c) design
+    and run evals that catch real failure modes, and (d) read and critique a production agent system's
+    architecture. Rubric grading: every artifact is scored against specific criteria with written
+    reasoning before each verdict. Above Bloom "apply," a self-explanation is required. Mediocre
+    work that "kinda works" gets honest feedback, not a passing grade — the bar is what a staff
+    engineer would ship.
+
+mastery_model:
+  excellence_bar: >
+    A staff-level agent engineer can: (1) decompose an ambiguous problem into the right control-flow
+    shape (prompt chaining, routing, parallelization, orchestrator-workers, evaluator-optimizer);
+    (2) build the evaluation and observability infrastructure that makes iteration possible;
+    (3) reason quantitatively about cost, latency, and reliability trade-offs; (4) design agent
+    harnesses that survive model upgrades; (5) know when NOT to add agentic complexity; (6) read
+    and critique a frontier agent architecture from primary sources; (7) ship a production agent
+    system that others use.
+  expert_practices:
+    - "Build fast, analyze traces, run small evals (10-20 samples), do error analysis to isolate the weakest component, improve that component, repeat. This loop IS the work."
+    - "End-state evaluation for stateful agents, not turn-by-turn. LLM-as-judge for scalable scoring plus mandatory human review to catch edge cases."
+    - "Track total runtime per tool call, total tool calls, total token consumption, tool error rates, and trajectory quality — not just top-line accuracy."
+    - "Keep architecture simple. Make reasoning visible. Ensure reliable, well-scoped tool interactions. Use checkpointing, retry logic, and incremental deployments."
+    - "Design harnesses expecting to re-architect repeatedly as models improve. The willingness to strip away scaffolding when models internalize it is the staff-level muscle."
+  frontier: >
+    The central live debate (2025-2026): single-agent (Cognition) vs. multi-agent (Anthropic).
+    Anthropic's multi-agent system outperforms single-agent by 90.2% on internal evals but uses
+    15× more tokens. Code-execution agents (CodeAct) increasingly outperform JSON tool-calling.
+    The field is moving from SWE-bench Verified (now saturated) to harder benchmarks (SWE-bench Pro,
+    Terminal-Bench, SWE-bench Multilingual). Multi-turn RL for agentic behavior (AgentGym-RL,
+    RAGEN) is the next frontier — training agents, not just prompting them. Standardization is
+    emerging (MCP for tool integration, AGENTS.md for project context).
+  staying_current:
+    - type: reference
+      title: "Latent Space (swyx & Alessio)"
+      url: "https://latentspacepod.com"
+      why: "The AI-engineering publication of record — newsletter, podcast, weekly LLM Paper Club on Discord."
+    - type: reference
+      title: "Simon Willison's Weblog"
+      url: "https://simonwillison.net"
+      why: "Near-daily practical AI engineering — the 'lethal trifecta' framing for agent security."
+    - type: reference
+      title: "Ahead of AI (Sebastian Raschka)"
+      url: "https://magazine.sebastianraschka.com"
+      why: "Deep technical dives on LLM research — especially training and fine-tuning advances."
+    - type: reference
+      title: "Interconnects (Nathan Lambert)"
+      url: "https://interconnects.ai"
+      why: "RLHF and post-training deep analysis — the training side of agent capability."
+    - type: reference
+      title: "LLM Agents Discord (Berkeley MOOC community)"
+      url: "https://discord.gg/llm-agents"
+      why: "Peer learning, paper discussion, project sharing around the Berkeley course."
+    - type: reference
+      title: "COLM (Conference on Language Modeling)"
+      url: "https://colmweb.org"
+      why: "The LLM-focused academic venue — where the best agent architecture papers are published."
+    - type: reference
+      title: "Anthropic Engineering Blog"
+      url: "https://anthropic.com/engineering"
+      why: "Primary source for production agent architecture, eval methodology, and tool design."
+  signature_work: >
+    A portfolio-grade agent system shipped and used by real people: either (a) a code-execution agent
+    that solves real software engineering tasks in a sandbox, (b) a research agent that performs
+    multi-source deep research with citations, or (c) a domain-specific multi-agent system that
+    orchestrates parallel workers. The system must have full observability, a documented eval harness,
+    and an architecture decision record explaining each choice quantitatively. This is what earns a
+    seat with the best — not a certificate, but demonstrable capability.
+  deliberate_practice: >
+    Each unit: concept lesson (diagram + primary source) → minimal from-scratch implementation →
+    eval (10-20 sample test set) → error analysis → improve → re-eval. Weekly: read one agent paper
+    and write a one-paragraph critique. By Semester 2: study one production agent system's source
+    code or architecture deep-dive each month (OpenHands, SWE-agent, Aider). Ship one real project
+    by course end. The rhythm is build → measure → improve → reflect, every week.
+
+grading_scale: { A: 4.0, B: 3.0, C: 2.0, F: 0.0 }
+grade_weights: { hw: 0.40, quiz: 0.15, exam: 0.15, midterm: 0.10, finals: 0.20 }
+
+rubrics:
+  - id: agent-build
+    shape: analytic
+    criteria:
+      - name: "Correctness"
+        target_descriptor: "The agent produces correct outputs for the eval set (≥80% pass rate on held-out test cases)."
+      - name: "Architecture"
+        target_descriptor: "The design follows the unit's pattern (e.g. ReAct loop, orchestrator-worker) with clean separation of reasoning, tool execution, and response generation."
+      - name: "Error recovery"
+        target_descriptor: "The agent handles tool failures gracefully (retry, fallback, escalate) — it does not silently fail or hallucinate tool results."
+      - name: "Eval rigor"
+        target_descriptor: "An eval harness with ≥10 test cases, end-state assertions, and a written error analysis identifying the weakest component."
+      - name: "Self-explanation"
+        target_descriptor: "Can explain every architectural choice with quantitative or research-backed reasoning. For Bloom ≥ apply: required to pass."
+  - id: concept-mastery
+    shape: single_point
+    criteria:
+      - name: "Understanding"
+        target_descriptor: "Can explain the concept from first principles with correct mental models, cite the primary source, and connect it to a real production system."
+
+assessments:
+  # Core proof gates (major summatives)
+  - id: a.u6.build
+    outcome_id: u6.build-agent
+    type: summative
+    modality: open_problem
+    bloom_target: create
+    rubric_id: agent-build
+    proof_gate: "Working ReAct agent from scratch (~400 lines, no framework) with ≥3 real tools, ≥10 eval cases, error analysis, and self-explanation of the loop architecture."
+    scaffold_stage: independent
+  - id: a.u9.design
+    outcome_id: u9.design-multiagent
+    type: summative
+    modality: open_problem
+    bloom_target: create
+    rubric_id: agent-build
+    proof_gate: "Working multi-agent system with ≥2 workers, artifact-passing (file system or message bus), ≥10 eval cases, and a written architecture decision record comparing single-agent vs multi-agent with quantitative reasoning."
+    scaffold_stage: independent
+  - id: a.u12.capstone
+    outcome_id: u12.ship
+    type: summative
+    modality: project
+    bloom_target: create
+    rubric_id: agent-build
+    proof_gate: "Portfolio-grade agent system: shipped, observable, eval-harnessed, with an architecture decision record. Must demonstrate at least 3 of: code execution, RAG, multi-agent, context engineering, computer use."
+    scaffold_stage: independent
+
+  # Unit-level summatives
+  - id: a.u1.python-tools
+    outcome_id: u1.python-tools
+    type: summative
+    modality: worked-completion
+    bloom_target: apply
+    rubric_id: concept-mastery
+    proof_gate: "Async Python script that calls 3+ APIs, handles errors, logs execution, and writes structured output. Must run without errors and pass 5 test cases."
+    scaffold_stage: worked_example
+  - id: a.u2.transformer
+    outcome_id: u2.transformer
+    type: summative
+    modality: open_problem
+    bloom_target: apply
+    rubric_id: concept-mastery
+    proof_gate: "Working minimal transformer implementation (attention + FFN + layer norm) with a written explanation of attention computation, tokenization, and inference forward pass from first principles."
+    scaffold_stage: completion
+  - id: a.u3.prompt
+    outcome_id: u3.prompt
+    type: summative
+    modality: open_problem
+    bloom_target: evaluate
+    rubric_id: concept-mastery
+    proof_gate: "5 escalating prompts for the same task, each scored against a 10-example test set, with written explanation of why each technique improved which failure mode."
+    scaffold_stage: completion
+  - id: a.u4.structured
+    outcome_id: u4.structured
+    type: summative
+    modality: open_problem
+    bloom_target: apply
+    rubric_id: concept-mastery
+    proof_gate: "Smart form filler that extracts structured JSON from natural language, with schema validation, error handling for missing/ambiguous fields, and ≥80% accuracy on 10 test inputs."
+    scaffold_stage: completion
+  - id: a.u5.tools
+    outcome_id: u5.tools
+    type: summative
+    modality: open_problem
+    bloom_target: apply
+    rubric_id: agent-build
+    proof_gate: "Multi-tool agent (3+ tools, raw API calls, no framework) with retry/fallback/escalation error recovery, tested on 10 edge-case queries with ≥80% correct tool selection."
+    scaffold_stage: completion
+  - id: a.u7.context
+    outcome_id: u7.context
+    type: summative
+    modality: open_problem
+    bloom_target: evaluate
+    rubric_id: agent-build
+    proof_gate: "Instrumented agent with context-efficiency metrics (KV-cache hit rate, token usage), at least 2 context-engineering techniques implemented, and a measured improvement report."
+    scaffold_stage: independent
+  - id: a.u8.rag
+    outcome_id: u8.rag
+    type: summative
+    modality: open_problem
+    bloom_target: apply
+    rubric_id: agent-build
+    proof_gate: "RAG pipeline with embedding, vector store, retrieval, and citation. Integrated as agent tool. ≥80% answer quality on 15 queries with precision@k and recall@k reported."
+    scaffold_stage: independent
+  - id: a.u10.code-agent
+    outcome_id: u10.code-agent
+    type: summative
+    modality: open_problem
+    bloom_target: analyze
+    rubric_id: agent-build
+    proof_gate: "Code-execution agent in sandbox that writes, runs, and iterates on code with error recovery. Plus a 1-page architectural analysis of OpenHands or SWE-agent with specific code-level observations."
+    scaffold_stage: independent
+  - id: a.u11.eval
+    outcome_id: u11.eval
+    type: summative
+    modality: open_problem
+    bloom_target: evaluate
+    rubric_id: agent-build
+    proof_gate: "Complete eval harness (≥20 held-out cases, LLM-as-judge, error analysis), full-session observability traces, and a measurable before/after improvement from diagnosis to fix."
+    scaffold_stage: independent
+
+units:
+  # ═══════════════ SEMESTER 1: Foundations → First Agent ═══════════════
+  - id: u1-python
+    title: Python for AI Engineering
+    order_index: 1
+    semester: 1
+    est_weeks: 2
+    foundational: true
+    summary: "Build the Python toolkit agents need: API calls, JSON handling, async I/O, data structures for LLM pipelines, environment management, and debugging."
+    resources:
+      - type: course
+        title: "AI Python for Beginners (DeepLearning.AI)"
+        url: "https://www.deeplearning.ai/short-courses/ai-python-for-beginners/"
+        locator: "all 4 lessons"
+        why: "Fastest path to the specific Python (data handling, APIs, async) that agents need — agent-oriented from day one."
+        tier: core
+        cost: free
+      - type: textbook
+        title: "Python Crash Course (3rd ed.)"
+        author: "Eric Matthes"
+        locator: "ch. 1-11, 15-17 (APIs), 18-20 (Django intro — skip, just read API patterns)"
+        why: "Solid Python foundations if the learner needs more depth than the DLAI course."
+        tier: supplementary
+        cost: paid
+    sessions:
+      - week: 1
+        focus: "Python environment, data structures, functions, type hints, list/dict comprehensions — the patterns agents use to process LLM output."
+        readings:
+          - type: course
+            title: "AI Python for Beginners (DeepLearning.AI)"
+            locator: "Lessons 1-2"
+            cost: free
+        deliverable: "A Python script that calls a REST API (e.g., OpenWeatherMap), parses JSON, handles errors, and prints a formatted summary."
+      - week: 2
+        focus: "Async I/O, HTTP clients (httpx/aiohttp), error handling patterns, logging, environment management (venv/uv), debugging with pdb."
+        readings:
+          - type: course
+            title: "AI Python for Beginners (DeepLearning.AI)"
+            locator: "Lessons 3-4"
+            cost: free
+        deliverable: "An async script that makes 3+ concurrent API calls, handles timeouts/retries, logs each step, and writes structured results to a JSON file."
+    outcomes:
+      - id: u1.python-tools
+        statement: "Write async Python scripts that call REST APIs, parse structured JSON responses, handle errors (timeout/retry/fallback), and log execution — all without a framework."
+        bloom_level: apply
+        depends_on: []
+        proof: a.u1.python-tools
+        spaced_items: [pat.async, pat.error-handling]
+        mastery_threshold: 0.8
+
+  - id: u2-llm-fundamentals
+    title: LLM Fundamentals — Transformers, Attention, Tokenization
+    order_index: 2
+    semester: 1
+    est_weeks: 3
+    foundational: true
+    summary: "Build deep understanding of what agents run on: the transformer architecture, attention mechanism, tokenization, pretraining, and inference. Implement a tiny transformer from scratch."
+    resources:
+      - type: video
+        title: "Neural Networks: Zero to Hero (Andrej Karpathy)"
+        url: "https://www.youtube.com/playlist?list=PLAqhIrjkxrVzNBzVO2E4PcbWQyZJ4hR9h"
+        locator: "Lectures 1-7 (micrograd → GPT from scratch)"
+        why: "Builds GPT from scratch — unmatched intuition for what happens inside the model agents call."
+        tier: core
+        cost: free
+      - type: video
+        title: "3Blue1Brown: Transformers & Attention"
+        url: "https://www.youtube.com/watch?v=eMlx5fFNoYc"
+        locator: "full series"
+        why: "Visual intuition for attention, query/key/value, and multi-head attention — the 'aha' moment."
+        tier: core
+        cost: free
+      - type: textbook
+        title: "Speech and Language Processing (3rd ed.)"
+        author: "Jurafsky & Martin"
+        url: "https://web.stanford.edu/~jurafsky/slp3/"
+        locator: "ch. 9 (transformers), ch. 10 (pretraining & fine-tuning), ch. 11 (prompting & in-context learning)"
+        why: "The authoritative technical reference — read alongside Karpathy for theory + implementation."
+        tier: core
+        cost: free
+      - type: textbook
+        title: "Hands-On Large Language Models"
+        author: "Alammar & Grootendorst"
+        url: "https://www.oreilly.com/library/view/hands-on-large-language/9781098150952/"
+        locator: "ch. 1-4 (tokenization → attention → transformers)"
+        why: "Code-first, visual companion — implement as you read."
+        tier: supplementary
+        cost: paid
+    sessions:
+      - week: 3
+        focus: "Tokenization — BPE, token vocabulary, special tokens, context windows. What the model actually 'sees' vs what you send."
+        readings:
+          - type: video
+            title: "Karpathy: Let's build GPT from scratch"
+            url: "https://www.youtube.com/watch?v=kCc8FmEb1nY"
+            locator: "first 60 min (tokenization + bigram baseline)"
+            cost: free
+          - type: textbook
+            title: "SLP3"
+            locator: "ch. 2 sec. 2.5 (tokenization)"
+            cost: free
+        deliverable: "Implement a BPE tokenizer from scratch on a small corpus. Explain: why subword tokenization? What happens to out-of-vocabulary words?"
+      - week: 4
+        focus: "Attention — query, key, value, scaled dot-product, multi-head attention, causal masking. The core mechanism that makes transformers work."
+        readings:
+          - type: video
+            title: "3Blue1Brown: Attention in transformers, visually explained"
+            url: "https://www.youtube.com/watch?v=eMlx5fFNoYc"
+            locator: "full video (26 min)"
+            cost: free
+          - type: textbook
+            title: "SLP3"
+            locator: "ch. 9 sec. 9.1-9.4 (self-attention, multi-head, transformer blocks)"
+            cost: free
+        deliverable: "Implement multi-head self-attention from scratch (NumPy/PyTorch) on a small sequence. Trace Q, K, V through the computation and explain at the tensor level."
+      - week: 5
+        focus: "Full transformer — encoder-decoder vs decoder-only, layer norm, residual connections, feed-forward, positional encoding. What happens during inference vs training."
+        readings:
+          - type: video
+            title: "Karpathy: Let's build GPT from scratch"
+            url: "https://www.youtube.com/watch?v=kCc8FmEb1nY"
+            locator: "remainder (60 min → end, GPT implementation)"
+            cost: free
+          - type: textbook
+            title: "SLP3"
+            locator: "ch. 9 sec. 9.5-9.8 (full architecture), ch. 10 (pretraining)"
+            cost: free
+        deliverable: "Complete a working tiny GPT that can generate text. Explain: what happens step-by-step during a single forward pass of inference. Why decoder-only for modern LLMs?"
+    outcomes:
+      - id: u2.transformer
+        statement: "Implement a minimal transformer (multi-head attention + feed-forward + layer norm) and explain attention computation, tokenization, and the inference forward pass from first principles."
+        bloom_level: apply
+        depends_on: [u1.python-tools]
+        proof: a.u2.transformer
+        spaced_items: [con.attention, con.transformer, con.tokenization]
+        mastery_threshold: 0.8
+
+  - id: u3-prompt-engineering
+    title: Prompt Engineering — Programming in Natural Language
+    order_index: 3
+    semester: 1
+    est_weeks: 1
+    foundational: true
+    summary: "Master prompt engineering as structured programming: system messages, few-shot selection, chain-of-thought, output format constraints, and prompt architecture patterns."
+    resources:
+      - type: docs
+        title: "Anthropic Prompt Engineering Guide"
+        url: "https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview"
+        locator: "full guide (overview → be clear and direct → use examples → chain of thought → system prompts)"
+        why: "Vendor-authoritative, research-backed, continuously updated — the primary reference."
+        tier: core
+        cost: free
+      - type: course
+        title: "ChatGPT Prompt Engineering for Developers (DeepLearning.AI)"
+        url: "https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers/"
+        locator: "all lessons"
+        why: "Hands-on with the patterns: iterative refinement, summarizing, inferring, transforming, expanding."
+        tier: core
+        cost: free
+      - type: reference
+        title: "Prompting Guide (DAIR.AI)"
+        url: "https://www.promptingguide.ai/"
+        locator: "techniques section (zero-shot, few-shot, CoT, self-consistency, ReAct)"
+        why: "Comprehensive catalog of prompting techniques with research paper citations."
+        tier: supplementary
+        cost: free
+    sessions:
+      - week: 6
+        focus: "System messages, few-shot examples, CoT, output format specification. Prompt as programming — explicit over implicit, constraints over hopes."
+        readings:
+          - type: docs
+            title: "Anthropic Prompt Engineering Guide"
+            locator: "full"
+            cost: free
+          - type: course
+            title: "ChatGPT Prompt Engineering (DLAI)"
+            locator: "lessons 1-6"
+            cost: free
+        deliverable: "Write 5 prompts for the same task (e.g., 'classify customer support tickets by urgency and category') with escalating quality: naive → system message → few-shot → CoT → structured JSON output. Score each on accuracy against a 10-example test set. Explain why each improvement moved the needle."
+    outcomes:
+      - id: u3.prompt
+        statement: "Design, test, and iteratively improve prompts using system messages, few-shot examples, chain-of-thought, and structured output specifications. Score and explain which technique improves which failure mode."
+        bloom_level: evaluate
+        depends_on: [u2.transformer]
+        proof: a.u3.prompt
+        spaced_items: [pat.system-msg, pat.few-shot, pat.cot]
+        mastery_threshold: 0.8
+
+  - id: u4-structured-output
+    title: Structured Output & Function Calling
+    order_index: 4
+    semester: 1
+    est_weeks: 1
+    foundational: true
+    summary: "Move from free-text parsing to reliable machine-readable contracts: JSON mode, function/tool calling schemas, response_format, and the API contract pattern."
+    resources:
+      - type: docs
+        title: "OpenAI Structured Outputs / Function Calling"
+        url: "https://platform.openai.com/docs/guides/structured-outputs"
+        locator: "full guide (structured outputs + function calling)"
+        why: "The canonical API spec — understand the contract before abstracting it."
+        tier: core
+        cost: free
+      - type: docs
+        title: "Anthropic Tool Use Guide"
+        url: "https://docs.anthropic.com/en/docs/build-with-claude/tool-use"
+        locator: "full guide (overview → defining tools → tool use workflow → best practices)"
+        why: "Anthropic's tool-use paradigm — the other major API contract."
+        tier: core
+        cost: free
+    sessions:
+      - week: 7
+        focus: "JSON mode, function/tool calling schemas, response_format, API contract pattern. Parsing partial/incomplete JSON from streaming responses."
+        readings:
+          - type: docs
+            title: "OpenAI Structured Outputs Guide"
+            locator: "full"
+            cost: free
+          - type: docs
+            title: "Anthropic Tool Use Guide"
+            locator: "overview + defining tools sections"
+            cost: free
+        deliverable: "Build a 'smart form filler' that takes natural language input (e.g., 'schedule lunch with Sarah next Tuesday at noon') and extracts structured JSON with date, time, attendees, title. Handle missing/ambiguous fields with clarification questions. ≥80% accuracy on 10 test cases."
+    outcomes:
+      - id: u4.structured
+        statement: "Design tool-calling schemas and extract structured JSON from LLM outputs with schema validation, handling missing/ambiguous fields gracefully."
+        bloom_level: apply
+        depends_on: [u3.prompt]
+        proof: a.u4.structured
+        spaced_items: [pat.tool-schema, pat.structured-output]
+        mastery_threshold: 0.8
+
+  - id: u5-tool-use
+    title: Tool Use — Building Agents That Act
+    order_index: 5
+    semester: 1
+    est_weeks: 2
+    foundational: false
+    summary: "Move from calling one tool to designing multi-tool agents: tool selection, error recovery (retry/fallback/escalate), parallel tool execution, and the tool-design principles that separate reliable agents from brittle ones."
+    resources:
+      - type: docs
+        title: "Anthropic: Writing Effective Tools for AI Agents"
+        url: "https://docs.anthropic.com/en/docs/build-with-claude/tool-use"
+        locator: "full guide, especially best practices section"
+        why: "The primary reference for tool-design principles — written by the team defining the field."
+        tier: core
+        cost: free
+      - type: course
+        title: "Hugging Face Agents Course — Unit 1: Introduction to Agents"
+        url: "https://huggingface.co/learn/agents-course/unit1"
+        locator: "full unit"
+        why: "Hands-on with smolagents: tool definition, agent initialization, first agent run."
+        tier: core
+        cost: free
+      - type: paper
+        title: "ReAct: Synergizing Reasoning and Acting in Language Models"
+        author: "Yao et al. (ICLR 2023)"
+        url: "https://arxiv.org/abs/2210.03629"
+        locator: "full paper"
+        why: "The foundational paper — read the primary source that defined the pattern."
+        tier: core
+        cost: free
+    sessions:
+      - week: 8
+        focus: "Tool definition — schemas, descriptions, parameter design. Single-tool agents: calling one API, parsing the result, deciding next action. Direct API calls, no framework."
+        readings:
+          - type: docs
+            title: "Anthropic Tool Use Guide"
+            locator: "overview → defining tools → tool use workflow"
+            cost: free
+          - type: course
+            title: "Hugging Face Agents Course — Unit 1"
+            locator: "full"
+            cost: free
+        deliverable: "Build a single-tool agent that can search the web (Serper/Brave API) and answer questions with citations. Raw API calls only."
+      - week: 9
+        focus: "Multi-tool agents — tool selection, parallel execution, error recovery. Retry with backoff, fallback to alternative tool, escalate to user. The tool-design principles that matter."
+        readings:
+          - type: docs
+            title: "Anthropic: Writing Effective Tools"
+            locator: "best practices section"
+            cost: free
+          - type: paper
+            title: "ReAct (Yao et al.)"
+            locator: "full paper"
+            cost: free
+        deliverable: "Build an agent with 3+ tools (search, calculator, weather/API) that correctly selects tools, handles tool failures (retry/fallback), and never hallucinates tool results. Test on 10 edge-case queries."
+    outcomes:
+      - id: u5.tools
+        statement: "Build a multi-tool agent (3+ tools, raw API calls, no framework) with retry/fallback/escalation error recovery that correctly selects tools ≥80% of the time on edge-case queries."
+        bloom_level: apply
+        depends_on: [u4.structured]
+        proof: a.u5.tools
+        spaced_items: [pat.tool-recovery, pat.tool-selection]
+        mastery_threshold: 0.8
+
+  - id: u6-agent-loops
+    title: Agent Loops — ReAct, Reflection & Planning
+    order_index: 6
+    semester: 1
+    est_weeks: 2
+    foundational: false
+    summary: "Build the core agent loop. Implement ReAct (Reason+Act) from scratch, then layer on reflection (self-critique + improvement) and planning (decompose → execute → verify). Study the SWE-agent ACI insight."
+    resources:
+      - type: course
+        title: "DeepLearning.AI: Agentic AI (Andrew Ng)"
+        url: "https://www.deeplearning.ai/short-courses/agentic-ai/"
+        locator: "full course (4 design patterns: reflection, tool use, planning, multi-agent)"
+        why: "Practical treatment of the four patterns with heavy eval emphasis — the canonical practitioner course."
+        tier: core
+        cost: free
+      - type: paper
+        title: "SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering"
+        author: "Yang, Jimenez, Wettig, Lieret, Yao, Narasimhan, Press (NeurIPS 2024)"
+        url: "https://arxiv.org/abs/2405.15793"
+        locator: "full paper — focus on ACI design (sec. 3)"
+        why: "The ACI insight: LM agents need purpose-built interfaces. The most-imitated idea in coding agents."
+        tier: core
+        cost: free
+      - type: course
+        title: "Hugging Face Agents Course — Unit 2: Agentic Patterns"
+        url: "https://huggingface.co/learn/agents-course/unit2"
+        locator: "full unit"
+        why: "Hands-on: tool use → planning → reflection patterns with smolagents."
+        tier: supplementary
+        cost: free
+    sessions:
+      - week: 10
+        focus: "The ReAct loop — interleaving reasoning traces and actions. Observation → Thought → Action → Observation cycle. Implementing the loop from scratch (~200 lines)."
+        readings:
+          - type: course
+            title: "DeepLearning.AI Agentic AI"
+            locator: "tool use + planning patterns"
+            cost: free
+          - type: paper
+            title: "SWE-agent"
+            locator: "sec. 1-3 (intro, ACI design)"
+            cost: free
+        deliverable: "Implement a ReAct agent loop from scratch — reason → act → observe → reason — with 2+ tools. Must handle: when to stop, what to do on tool error, how to avoid loops."
+      - week: 11
+        focus: "Reflection and planning — self-critique loops (Reflexion), plan-and-execute vs ReAct, when each pattern wins. The ACI concept: designing interfaces for agents, not humans."
+        readings:
+          - type: course
+            title: "DeepLearning.AI Agentic AI"
+            locator: "reflection pattern + full review"
+            cost: free
+          - type: course
+            title: "Hugging Face Agents Course — Unit 2"
+            locator: "planning + reflection sections"
+            cost: free
+        deliverable: "Extend your ReAct agent with a reflection step — after producing an answer, critique it, then improve. Compare ReAct vs Plan+Execute on 5 tasks. Write: when does reflection actually help?"
+    outcomes:
+      - id: u6.build-agent
+        statement: "Build a working ReAct agent from scratch (~400 lines, no framework) with ≥3 real tools, reflection capability, and ≥10 eval cases. Explain the loop architecture and the ACI design principle."
+        bloom_level: create
+        depends_on: [u5.tools]
+        proof: a.u6.build
+        spaced_items: [pat.react-loop, pat.reflection, pat.aci]
+        mastery_threshold: 0.8
+
+  - id: u7-context-engineering
+    title: Context Engineering & Memory
+    order_index: 7
+    semester: 1
+    est_weeks: 1
+    foundational: false
+    summary: "Master the discipline that separates production agents from demos: KV-cache economics, context compaction, externalized memory (file system as context), and preserving failure traces."
+    resources:
+      - type: reference
+        title: "Manus: Context Engineering for AI Agents — Lessons from Building Manus"
+        author: "Yichao 'Peak' Ji"
+        url: "https://manus.im/blog/context-engineering"
+        locator: "full article (six principles)"
+        why: "The six principles from a production agent at scale (~50 tool calls/task avg). KV-cache hit rate as the single most important metric."
+        tier: core
+        cost: free
+      - type: docs
+        title: "Anthropic: Effective Context Engineering for AI Agents"
+        url: "https://docs.anthropic.com/en/docs/build-with-claude/context-window"
+        locator: "full guide"
+        why: "The complementary practitioner treatment from the other major lab."
+        tier: core
+        cost: free
+      - type: paper
+        title: "LLMs Get Lost in Multi-Turn Conversation"
+        author: "Laban, Hayashi et al."
+        url: "https://arxiv.org/abs/2505.06120"
+        locator: "abstract + results (sec. 3-4)"
+        why: "Quantified context rot: 39% drop single-turn → multi-turn across 15 models. The empirical case for context engineering."
+        tier: supplementary
+        cost: free
+    sessions:
+      - week: 12
+        focus: "KV-cache economics — prompt prefix stability, append-only context, cached vs uncached cost (10× difference). File system as externalized memory. Masking tool logits. Keeping wrong turns in. Attention through recitation."
+        readings:
+          - type: reference
+            title: "Manus: Context Engineering"
+            locator: "full (all six principles)"
+            cost: free
+          - type: docs
+            title: "Anthropic: Effective Context Engineering"
+            locator: "full"
+            cost: free
+        deliverable: "Take your ReAct agent from U6 and instrument it: track token usage per turn, KV-cache hit rate, and context length. Implement 2 context-engineering techniques (e.g., append-only context, file-system offloading of long tool outputs). Measure the improvement. Due: end of Semester 1."
+    outcomes:
+      - id: u7.context
+        statement: "Instrument an agent with context-efficiency metrics and implement at least 2 context-engineering techniques with a measured before/after improvement report."
+        bloom_level: evaluate
+        depends_on: [u6.build-agent]
+        proof: a.u7.context
+        spaced_items: [con.kv-cache, con.context-engineering]
+        mastery_threshold: 0.8
+
+  # ═══════════════ SEMESTER 2: Production → Mastery ═══════════════
+  - id: u8-rag
+    title: RAG — Retrieval-Augmented Generation
+    order_index: 8
+    semester: 2
+    est_weeks: 2
+    foundational: false
+    summary: "Build the retrieval backbone that grounds agents in real data: embeddings, vector stores, chunking strategies, hybrid search, reranking, and citation. Integrate RAG as an agent tool."
+    resources:
+      - type: course
+        title: "DeepLearning.AI: Building and Evaluating Advanced RAG"
+        url: "https://www.deeplearning.ai/short-courses/"
+        locator: "full course"
+        why: "Production-grade RAG from chunking to eval — the practitioner's guide."
+        tier: core
+        cost: free
+      - type: textbook
+        title: "AI Engineering"
+        author: "Chip Huyen"
+        locator: "ch. 8-9 (RAG architecture, chunking, retrieval, reranking)"
+        why: "The engineering textbook treatment — architecture decisions and trade-offs."
+        tier: core
+        cost: paid
+      - type: course
+        title: "Hugging Face Agents Course — Agentic RAG Unit"
+        url: "https://huggingface.co/learn/agents-course/unit3"
+        locator: "full unit"
+        why: "RAG integrated as an agent tool — retrieval-augmented agent behavior."
+        tier: supplementary
+        cost: free
+    sessions:
+      - week: 13
+        focus: "Embeddings, vector stores (ChromaDB/FAISS), chunking strategies, basic retrieval. The naive RAG pipeline."
+        readings:
+          - type: textbook
+            title: "AI Engineering (Huyen)"
+            locator: "ch. 8"
+            cost: paid
+          - type: course
+            title: "DeepLearning.AI Advanced RAG"
+            locator: "chunking + retrieval modules"
+            cost: free
+        deliverable: "Build a RAG pipeline: embed a corpus (your choice — docs, codebase, papers), store in a vector DB, retrieve top-k for a query, and generate an answer. Compute precision@k and recall@k."
+      - week: 14
+        focus: "Hybrid search, reranking, citation, agent-integrated RAG. The agent decides WHEN to retrieve."
+        readings:
+          - type: textbook
+            title: "AI Engineering (Huyen)"
+            locator: "ch. 9"
+            cost: paid
+          - type: course
+            title: "Hugging Face Agents Course — Agentic RAG"
+            locator: "full unit"
+            cost: free
+        deliverable: "Wire your RAG pipeline as a tool in your agent. The agent decides when retrieval is needed (vs answering from context). Test on 15 queries. ≥80% answer quality with citations."
+    outcomes:
+      - id: u8.rag
+        statement: "Build a RAG pipeline with embedding, vector store, retrieval, and citation. Integrate as an agent tool. ≥80% answer quality on 15 queries with precision@k and recall@k reported."
+        bloom_level: apply
+        depends_on: [u7.context]
+        proof: a.u8.rag
+        spaced_items: [pat.rag, pat.retrieval, con.embeddings]
+        mastery_threshold: 0.8
+
+  - id: u9-multi-agent
+    title: Multi-Agent Orchestration
+    order_index: 9
+    semester: 2
+    est_weeks: 2
+    foundational: false
+    summary: "Design and build multi-agent systems. Study both sides of the debate (Anthropic orchestrator-worker vs Cognition single-agent). Learn artifact-passing, delegation patterns, and when NOT to use multi-agent."
+    resources:
+      - type: reference
+        title: "Anthropic: How We Built Our Multi-Agent Research System"
+        url: "https://www.anthropic.com/engineering/multi-agent-research-system"
+        locator: "full article"
+        why: "The defining multi-agent reference: orchestrator-worker, artifact pattern, rainbow deployments."
+        tier: core
+        cost: free
+      - type: reference
+        title: "Cognition: Don't Build Multi-Agents"
+        url: "https://cognition.ai/blog/dont-build-multi-agents"
+        locator: "full article"
+        why: "The counter-argument: single context is more reliable for tightly coupled work. Read both sides."
+        tier: core
+        cost: free
+      - type: reference
+        title: "Cognition: Multi-Agents — What's Actually Working"
+        url: "https://cognition.ai/blog/multi-agents-whats-working"
+        locator: "full article"
+        why: "Read-only subagents, MCP delegation, deliberate context isolation — the nuanced middle ground."
+        tier: core
+        cost: free
+      - type: course
+        title: "DeepLearning.AI Agentic AI"
+        locator: "multi-agent pattern"
+        why: "Andrew Ng's practical treatment of the pattern."
+        tier: supplementary
+        cost: free
+    sessions:
+      - week: 15
+        focus: "Orchestrator-worker pattern — task decomposition, parallel worker dispatch, artifact-passing via file system. The anthropic research system architecture."
+        readings:
+          - type: reference
+            title: "Anthropic: Multi-Agent Research System"
+            locator: "full"
+            cost: free
+          - type: reference
+            title: "Cognition: Don't Build Multi-Agents"
+            locator: "full"
+            cost: free
+        deliverable: "Design (on paper) a multi-agent architecture for a research task. Decompose into orchestrator + 3 workers. Specify: what each agent sees, how they communicate, and the artifact format."
+      - week: 16
+        focus: "Building it — implementing orchestrator-worker with 2+ workers, artifact-passing, and comparing single-agent vs multi-agent performance. The 'game of telephone' problem."
+        readings:
+          - type: reference
+            title: "Cognition: Multi-Agents — What's Actually Working"
+            locator: "full"
+            cost: free
+          - type: course
+            title: "DeepLearning.AI Agentic AI"
+            locator: "multi-agent pattern"
+            cost: free
+        deliverable: "Build a working multi-agent system: orchestrator dispatches to 2+ workers, workers pass artifacts (via file system or message bus). Compare single-agent vs multi-agent on the same task. Write an architecture decision record with quantitative reasoning."
+    outcomes:
+      - id: u9.design-multiagent
+        statement: "Design and build a multi-agent system with ≥2 workers, artifact-passing, and a written ADR comparing single-agent vs multi-agent with quantitative reasoning about cost, latency, and reliability."
+        bloom_level: create
+        depends_on: [u8.rag]
+        proof: a.u9.design
+        spaced_items: [pat.orchestrator-worker, pat.multi-agent-tradeoffs]
+        mastery_threshold: 0.8
+
+  - id: u10-code-agents
+    title: Code-Execution & Computer-Use Agents
+    order_index: 10
+    semester: 2
+    est_weeks: 3
+    foundational: false
+    summary: "Build agents that write, run, and iterate on code in sandboxes. Study the CodeAct paradigm, study OpenHands/SWE-agent source, and explore computer-use agents (GUI, browser)."
+    resources:
+      - type: paper
+        title: "CodeAct: Executable Code as a Unified Action Space"
+        author: "Wang et al."
+        url: "https://arxiv.org/abs/2402.01030"
+        locator: "full paper"
+        why: "The paradigm: code as action space — increasingly outperforms JSON tool-calling."
+        tier: core
+        cost: free
+      - type: reference
+        title: "OpenHands (formerly OpenDevin) — Architecture & CodeAct Agent"
+        url: "https://github.com/All-Hands-AI/OpenHands"
+        locator: "architecture docs + CodeAct agent source"
+        why: "Open platform: controller-agent-runtime with sandboxed execution. 65K+ GitHub stars."
+        tier: core
+        cost: free
+      - type: course
+        title: "DeepLearning.AI: Building Code Agents with Hugging Face smolagents"
+        author: "Thomas Wolf & Aymeric Roucher"
+        url: "https://www.deeplearning.ai/short-courses/building-code-agents-with-smolagents/"
+        locator: "full course"
+        why: "Hands-on sandboxed code execution with E2B — the fastest path to a working code agent."
+        tier: core
+        cost: free
+      - type: docs
+        title: "Anthropic Computer Use Guide"
+        url: "https://docs.anthropic.com/en/docs/build-with-claude/computer-use"
+        locator: "full guide + cookbook"
+        why: "The primary reference for computer-use agents — screenshots, clicks, typing."
+        tier: supplementary
+        cost: free
+    sessions:
+      - week: 17
+        focus: "Code execution in sandboxes — E2B, Docker-based isolation. The code-agent loop: write code → execute → read output → fix errors → re-execute. CodeAct vs JSON tool-calling."
+        readings:
+          - type: course
+            title: "DLAI Building Code Agents"
+            locator: "full course"
+            cost: free
+          - type: paper
+            title: "CodeAct"
+            locator: "sec. 1-3"
+            cost: free
+        deliverable: "Build a code-execution agent that writes Python to solve a task, runs it in E2B sandbox, reads the output, and iterates on errors. Test on 3 programming tasks."
+      - week: 18
+        focus: "Study a production code agent — OpenHands architecture deep-dive: controller → agent → sandbox runtime, event stream, AgentHub. SWE-agent ACI design."
+        readings:
+          - type: reference
+            title: "OpenHands Architecture"
+            locator: "full architecture docs + CodeAct agent source"
+            cost: free
+        deliverable: "Read OpenHands source (controller, agent loop, sandbox runtime). Write a 1-page architectural analysis identifying 3 specific design decisions and why they matter."
+      - week: 19
+        focus: "Computer-use agents — screenshots as input, click/type/keypress as actions. Browser agents (Playwright). The OSWorld benchmark landscape."
+        readings:
+          - type: docs
+            title: "Anthropic Computer Use"
+            locator: "full guide"
+            cost: free
+        deliverable: "Extend your agent with a browser tool (Playwright) — navigate to a URL, extract structured data, fill a form. Handle dynamic pages and errors."
+    outcomes:
+      - id: u10.code-agent
+        statement: "Build a code-execution agent in a sandbox that writes, runs, and iterates on code with error recovery. Write a 1-page architectural analysis of OpenHands or SWE-agent identifying specific code-level design decisions."
+        bloom_level: analyze
+        depends_on: [u9.design-multiagent]
+        proof: a.u10.code-agent
+        spaced_items: [pat.code-exec, con.codeact, pat.sandbox]
+        mastery_threshold: 0.8
+
+  - id: u11-eval-observability
+    title: Evaluation, Observability & Safety
+    order_index: 11
+    semester: 2
+    est_weeks: 3
+    foundational: false
+    summary: "Build the eval-and-observe infrastructure that makes reliable agents possible: held-out test sets, LLM-as-judge, end-state eval, full-session tracing, error analysis, guardrails, and the eval-driven development loop."
+    resources:
+      - type: docs
+        title: "Anthropic: Evaluate Your Agent"
+        url: "https://docs.anthropic.com/en/docs/build-with-claude/evaluate"
+        locator: "full guide"
+        why: "End-state eval, LLM-as-judge, human review — the production eval methodology."
+        tier: core
+        cost: free
+      - type: reference
+        title: "Langfuse (OSS Observability)"
+        url: "https://langfuse.com/docs"
+        locator: "tracing + evaluation docs"
+        why: "Leading open-source, MIT-licensed. Full-session trace capture for multi-step agent chains."
+        tier: core
+        cost: free
+      - type: course
+        title: "Hugging Face Agents Course — Observability & Eval Unit"
+        url: "https://huggingface.co/learn/agents-course/unit4"
+        locator: "full unit"
+        why: "Hands-on with Langfuse/OpenTelemetry for agent tracing and evaluation."
+        tier: supplementary
+        cost: free
+      - type: course
+        title: "Berkeley Advanced LLM Agents — Safety Lectures"
+        url: "https://rdi.berkeley.edu/advanced-agentic-ai/"
+        locator: "safety/guardrails lectures"
+        why: "Rigorous academic treatment of agent safety, alignment, and guardrails."
+        tier: core
+        cost: free
+    sessions:
+      - week: 20
+        focus: "Eval design — end-state vs turn-by-turn, held-out sets, LLM-as-judge, the eval-driven development loop. Build an eval harness for your agent."
+        readings:
+          - type: docs
+            title: "Anthropic: Evaluate Your Agent"
+            locator: "full"
+            cost: free
+        deliverable: "Build an eval harness for your agent: ≥20 held-out test cases, end-state assertions, LLM-as-judge scoring. Run it and produce an error analysis identifying the weakest component."
+      - week: 21
+        focus: "Observability — full-session tracing with Langfuse/OpenTelemetry. Track: total runtime, tool calls, token consumption, tool error rates, trajectory quality. Diagnose failures from traces."
+        readings:
+          - type: reference
+            title: "Langfuse Docs"
+            locator: "tracing quickstart + eval features"
+            cost: free
+          - type: course
+            title: "Hugging Face Agents Course — Unit 4"
+            locator: "full unit"
+            cost: free
+        deliverable: "Wire your agent with Langfuse tracing. Run 10 tasks, capture full traces. From the traces: identify the single worst-performing component, fix it, and show before/after metrics."
+      - week: 22
+        focus: "Safety, guardrails, and alignment — prompt injection, the lethal trifecta, confidence estimation, human-in-the-loop escalation, content safety filters."
+        readings:
+          - type: course
+            title: "Berkeley Advanced LLM Agents"
+            locator: "safety/guardrails lectures"
+            cost: free
+        deliverable: "Add guardrails to your agent: content safety filter, confidence threshold for escalation, prompt-injection detection. Test with 5 adversarial inputs. Document the guardrail architecture."
+    outcomes:
+      - id: u11.eval
+        statement: "Build a complete eval harness (≥20 held-out cases, LLM-as-judge, error analysis) with full-session observability traces, and demonstrate a measurable before/after improvement from diagnosis to fix."
+        bloom_level: evaluate
+        depends_on: [u10.code-agent]
+        proof: a.u11.eval
+        spaced_items: [pat.eval-harness, pat.observability, con.safety]
+        mastery_threshold: 0.8
+
+  - id: u12-capstone
+    title: Production Deployment & Capstone
+    order_index: 12
+    semester: 2
+    est_weeks: 2
+    foundational: false
+    summary: "Ship your portfolio-grade agent system. Deploy with reliability patterns (checkpointing, retry, rainbow deploys), write the architecture decision record, and present the system end-to-end."
+    resources:
+      - type: textbook
+        title: "AI Engineering"
+        author: "Chip Huyen"
+        locator: "ch. 13-15 (deployment, monitoring, continuous improvement)"
+        why: "The production deployment chapters — what it takes to ship and maintain."
+        tier: core
+        cost: paid
+      - type: reference
+        title: "Anthropic: Building Effective Agents (eBook)"
+        url: "https://docs.anthropic.com/en/docs/build-with-claude/agent-patterns"
+        locator: "full — Coinbase & Thomson Reuters case studies"
+        why: "Real enterprise case studies of agent deployment at scale."
+        tier: core
+        cost: free
+    sessions:
+      - week: 23
+        focus: "Production deployment — checkpointing, retry logic, incremental deploys, cost monitoring, multi-model resilience. Study the Fin/Anthropic production patterns."
+        readings:
+          - type: textbook
+            title: "AI Engineering (Huyen)"
+            locator: "ch. 13-15"
+            cost: paid
+          - type: reference
+            title: "Anthropic: Building Effective Agents"
+            locator: "production deployment + case studies"
+            cost: free
+        deliverable: "Deploy your capstone agent with: checkpointing (can resume from mid-task failure), cost tracking (tokens + latency per task), and a health endpoint. Document the deployment architecture."
+      - week: 24
+        focus: "Capstone completion — architecture decision record, final eval run, demo, and retrospective."
+        readings: []
+        deliverable: "Ship your portfolio-grade agent system. Must demonstrate ≥3 of: code execution, RAG, multi-agent, context engineering, computer use. Include: full observability, eval harness, architecture decision record (quantitative reasoning for each choice), and a retrospective of what you'd change."
+    outcomes:
+      - id: u12.ship
+        statement: "Ship a portfolio-grade agent system with full observability, eval harness, and an architecture decision record. Demonstrate at least 3 advanced capabilities and defend every architectural choice quantitatively."
+        bloom_level: create
+        depends_on: [u11.eval]
+        proof: a.u12.capstone
+        spaced_items: [pat.production-deploy, con.architecture-judgment]
+        mastery_threshold: 0.8
