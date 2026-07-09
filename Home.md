@@ -3,7 +3,7 @@
 > [!abstract] Where you are
 > Semester 1 · Week 1/12 · Standing: good
 
-> [!tip] Today's reads → [[Briefing/2026-07-08|2026-07-08]]
+> [!tip] Today's reads → [[Briefing/2026-07-09|2026-07-09]]
 
 ## 📚 Courses
 | Course | Status | Mastery |
