@@ -1,0 +1,16 @@
+{
+ "outcomes": {},
+ "topics": {},
+ "routine": {
+  "best_hours": [],
+  "adherence_by_slot": {}
+ },
+ "pace": {
+  "task_cap_observed": 0,
+  "rest_day": null
+ },
+ "preferences": {},
+ "constraints": [],
+ "interests": [],
+ "trend_window_days": 14
+}
