@@ -5,5 +5,6 @@
   "baseFontSize": 29,
   "baseFontSizeAction": true,
   "interfaceFontFamily": "Inter",
-  "translucency": true
+  "translucency": true,
+  "textFontFamily": "Franklin Gothic"
 }
