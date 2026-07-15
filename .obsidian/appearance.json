@@ -1,9 +1,10 @@
 {
   "accentColor": "#0fd21c",
-  "cssTheme": "Cupertino",
-  "theme": "moonstone",
-  "baseFontSize": 18,
-  "baseFontSizeAction": false,
+  "cssTheme": "Minimal",
+  "theme": "system",
+  "baseFontSize": 29,
+  "baseFontSizeAction": true,
   "interfaceFontFamily": "Inter",
-  "translucency": true
+  "translucency": true,
+  "textFontFamily": "Atkinson Hyperlegible Next"
 }
