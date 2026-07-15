@@ -73,6 +73,18 @@ categories:
       - { title: "rendezvous with cassidoo — web + challenges", url: "https://cassidoo.co/newsletter/", rss: "https://cassidoo.co/rss.xml" }
       - { title: "The Engineering Manager", url: "https://www.theengineeringmanager.com/", rss: "https://www.theengineeringmanager.com/feed" }
 
+  - name: "Individual engineers — personal blogs"
+    sources:
+      - { title: "Andrej Karpathy", url: "https://karpathy.github.io/", rss: "https://karpathy.github.io/feed.xml", weight: high }
+      - { title: "Antirez — Salvatore Sanfilippo", url: "https://antirez.com/", rss: "https://antirez.com/rss" }
+      - { title: "Amos Wenger — fasterthanli.me", url: "https://fasterthanli.me/", rss: "https://fasterthanli.me/index.xml" }
+      - { title: "rachelbythebay", url: "https://rachelbythebay.com/w/", rss: "https://rachelbythebay.com/w/atom.xml" }
+      - { title: "Charity Majors — charity.wtf", url: "https://charity.wtf/", rss: "https://charity.wtf/feed/" }
+      - { title: "Will Larson — Irrational Exuberance", url: "https://lethain.com/" }
+      - { title: "Mitchell Hashimoto", url: "https://mitchellh.com/", rss: "https://mitchellh.com/feed.xml" }
+      - { title: "Bartosz Ciechanowski", url: "https://ciechanow.ski/", rss: "https://ciechanow.ski/atom.xml" }
+      - { title: "Armin Ronacher — lucumr", url: "https://lucumr.pocoo.org/", rss: "https://lucumr.pocoo.org/feed.atom" }
+
 # Aggregators — scanned every day for the day's biggest stories.
 aggregators:
   - { title: "Hacker News (front page)", api: "https://hn.algolia.com/api/v1/search?tags=front_page&hitsPerPage=30", weight: high }
