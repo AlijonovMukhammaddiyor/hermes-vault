@@ -2,7 +2,7 @@
   "accentColor": "#0fd21c",
   "cssTheme": "Minimal",
   "theme": "system",
-  "baseFontSize": 22,
+  "baseFontSize": 29,
   "baseFontSizeAction": true,
   "interfaceFontFamily": "Inter",
   "translucency": true
