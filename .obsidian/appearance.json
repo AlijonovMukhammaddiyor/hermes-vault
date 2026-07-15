@@ -1,9 +1,9 @@
 {
   "accentColor": "#0fd21c",
-  "cssTheme": "Cupertino",
-  "theme": "moonstone",
-  "baseFontSize": 18,
-  "baseFontSizeAction": false,
+  "cssTheme": "Minimal",
+  "theme": "system",
+  "baseFontSize": 22,
+  "baseFontSizeAction": true,
   "interfaceFontFamily": "Inter",
   "translucency": true
 }
