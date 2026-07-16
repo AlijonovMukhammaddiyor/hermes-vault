@@ -18,5 +18,8 @@
 > [!todo] Blocked on you
 > - **AI Agent Engineering** — waiting for your placement exam → say `tailor AG201` to take it and skip what you already know
 
+## ✅ Today
+- [ ] Placement exam · AI Agent Engineering
+
 ---
 [[Board]] · [[Catalog]] · [[Guide]] · [[LearnerModel|What I know about you]] · [[Registrar/Transcript|Transcript]] · [[Registrar/DegreeProgress|Degree Progress]] · [[Registrar/Schedule|Schedule]]
