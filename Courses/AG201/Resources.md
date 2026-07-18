@@ -1,73 +1,93 @@
 # 📖 Resources — AG201 AI Agent Engineering
 
 ## Primary text
-- **Speech and Language Processing (3rd ed. draft)** · Dan Jurafsky & James H. Martin — ch. 9-12 (transformers, LLMs, prompting, fine-tuning, RLHF, RAG, agents) _(textbook)_ — https://web.stanford.edu/~jurafsky/slp3/  · _The canonical, free, continuously updated NLP/LLM reference — chapters 9-12 cover the full LLM stack that agents are built on._
+- **AI Engineering: Building Applications with Foundation Models** · Chip Huyen — whole — ch. 4 (eval), ch. 5 (prompting), ch. 6 (RAG & agents), ch. 9–10 (architecture & deployment) _(textbook, paid)_ — https://www.oreilly.com/library/view/ai-engineering/9781098166309/  · _The single best prose-based textbook for this learner — concept-first, no code required, with the eval rigor and production architecture judgment that separates senior engineers. Read cover-to-cover._
 
 ## Course library
-- **AI Engineering** · Chip Huyen — whole (evals ch. 5-7, RAG ch. 8-9, agents ch. 10-12, deployment ch. 13-15) _(textbook, paid)_ — https://www.oreilly.com/library/view/ai-engineering/9781098166309/  · _The practitioner's textbook for building LLM applications end-to-end — bridges theory to production._
-- **Hands-On Large Language Models** · Jay Alammar & Maarten Grootendorst — whole _(textbook, paid)_ — https://www.oreilly.com/library/view/hands-on-large-language/9781098150952/  · _Visual, code-first companion — builds transformer/attention intuition through implementation._
-- **UC Berkeley CS294/194-196: Large Language Model Agents** · Dawn Song, Xinyun Chen — Lectures 1-14 (full MOOC) _(course)_ — https://llmagents-learning.org/  · _The definitive academic agent course — guest lectures from the researchers who defined the field._
-- **Stanford CS336: Language Modeling from Scratch** · Percy Liang, et al. — Lectures 1-10 _(course)_ — https://cs336.stanford.edu/  · _Build an LLM end-to-end — deepest possible foundation for understanding what agents run on._
+- **UC Berkeley CS294/194-196: LLM Agents MOOC** · Dawn Song, Xinyun Chen — F24 foundations, Sp25 Advanced LLM Agents, F25 Agentic AI — full lecture videos on YouTube _(course)_ — https://llmagents-learning.org/  · _The definitive academic agent course — guest lectures from the researchers who defined the field. The structured spine for the whole course._
+- **Anthropic Engineering Blog — Agent Essays** — "Building Effective Agents", "How we built our multi-agent research system", "Effective context engineering", "Effective harnesses for long-running agents", "When to use multi-agent systems (and when not to)" _(reference)_ — https://anthropic.com/engineering  · _The highest-signal free resource for architectural reasoning. These five essays teach the design tradeoffs frontier teams actually use._
+- **Lilian Weng: LLM Powered Autonomous Agents** · Lilian Weng — full post _(reference)_ — https://lilianweng.github.io/posts/2023-06-23-agent/  · _The canonical free deep-dive on planning, memory, and tool-use — still the most-cited agent primer._
+- **"The Second Half"** · Shunyu Yao — full essay _(reference)_ — https://ysymyth.github.io/The-Second-Half/  · _The canonical framing of the frontier shift: evaluation over training. Sets the philosophical spine for the entire course._
+- **Manus: Context Engineering for AI Agents** · Yichao 'Peak' Ji — full article (six principles) _(reference)_ — https://manus.im/blog/context-engineering  · _The six principles from a production agent at scale — KV-cache hit rate as the single most important metric._
+- **Model Context Protocol (MCP)** — specification + docs _(reference)_ — https://modelcontextprotocol.io  · _The de-facto standard for connecting agents to tools/data via JSON-RPC. Core knowledge for any agent engineer._
 
 ## By unit
 
-### Sem 1 · Python for AI Engineering
-- **AI Python for Beginners (DeepLearning.AI)** — all 4 lessons _(course)_ — https://www.deeplearning.ai/short-courses/ai-python-for-beginners/  · _Fastest path to the specific Python (data handling, APIs, async) that agents need — agent-oriented from day one._
-- **Python Crash Course (3rd ed.)** · Eric Matthes — ch. 1-11, 15-17 (APIs), 18-20 (Django intro — skip, just read API patterns) _(textbook, paid)_  · _Solid Python foundations if the learner needs more depth than the DLAI course._
+### Sem 1 · LLM Foundations — What You Need to Reason About
+- **3Blue1Brown: Transformers & Attention** — full series _(video)_ — https://www.youtube.com/watch?v=eMlx5fFNoYc  · _The visual intuition for attention, Q/K/V, and multi-head — the 'aha' moment before diving into details._
+- **Andrej Karpathy: Deep Dive into LLMs like ChatGPT** — full video (~3.5h) _(video)_ — https://www.youtube.com/watch?v=7xTGNNLPyMI  · _The fastest path to a strong mental model of how LLMs work — tokenization, pretraining, fine-tuning, RLHF, tool use, multimodal._
+- **"The Second Half" (Shunyu Yao)** — full essay _(reference)_ — https://ysymyth.github.io/The-Second-Half/  · _Sets the philosophical spine: evaluation over training. Read first — it frames why this course is eval-forward._
+- **AI Engineering (Huyen)** — ch. 1–3 (foundation models overview) _(textbook, paid)_  · _The engineering perspective: what matters for building on top of models, not training them._
 
-### Sem 1 · LLM Fundamentals — Transformers, Attention, Tokenization
-- **Neural Networks: Zero to Hero (Andrej Karpathy)** — Lectures 1-7 (micrograd → GPT from scratch) _(video)_ — https://www.youtube.com/playlist?list=PLAqhIrjkxrVzNBzVO2E4PcbWQyZJ4hR9h  · _Builds GPT from scratch — unmatched intuition for what happens inside the model agents call._
-- **3Blue1Brown: Transformers & Attention** — full series _(video)_ — https://www.youtube.com/watch?v=eMlx5fFNoYc  · _Visual intuition for attention, query/key/value, and multi-head attention — the 'aha' moment._
-- **Speech and Language Processing (3rd ed.)** · Jurafsky & Martin — ch. 9 (transformers), ch. 10 (pretraining & fine-tuning), ch. 11 (prompting & in-context learning) _(textbook)_ — https://web.stanford.edu/~jurafsky/slp3/  · _The authoritative technical reference — read alongside Karpathy for theory + implementation._
-- **Hands-On Large Language Models** · Alammar & Grootendorst — ch. 1-4 (tokenization → attention → transformers) _(textbook, paid)_ — https://www.oreilly.com/library/view/hands-on-large-language/9781098150952/  · _Code-first, visual companion — implement as you read._
-
-### Sem 1 · Prompt Engineering — Programming in Natural Language
+### Sem 1 · Prompt Engineering & Structured Output — Programming in Natural Language
 - **Anthropic Prompt Engineering Guide** — full guide (overview → be clear and direct → use examples → chain of thought → system prompts) _(docs)_ — https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview  · _Vendor-authoritative, research-backed, continuously updated — the primary reference._
-- **ChatGPT Prompt Engineering for Developers (DeepLearning.AI)** — all lessons _(course)_ — https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers/  · _Hands-on with the patterns: iterative refinement, summarizing, inferring, transforming, expanding._
-- **Prompting Guide (DAIR.AI)** — techniques section (zero-shot, few-shot, CoT, self-consistency, ReAct) _(reference)_ — https://www.promptingguide.ai/  · _Comprehensive catalog of prompting techniques with research paper citations._
+- **OpenAI Structured Outputs / Function Calling** — full guide _(docs)_ — https://platform.openai.com/docs/guides/structured-outputs  · _The canonical API spec for structured output and tool-calling schemas._
+- **AI Engineering (Huyen)** — ch. 5 (prompt engineering) _(textbook, paid)_  · _Concept-first treatment of prompt architecture, few-shot selection, and structured output as programming._
+- **Lilian Weng: Prompt Engineering** — full post _(reference)_ — https://lilianweng.github.io/posts/2024-02-05-prompt-engineering/  · _Comprehensive taxonomy of prompting techniques with research citations._
 
-### Sem 1 · Structured Output & Function Calling
-- **OpenAI Structured Outputs / Function Calling** — full guide (structured outputs + function calling) _(docs)_ — https://platform.openai.com/docs/guides/structured-outputs  · _The canonical API spec — understand the contract before abstracting it._
-- **Anthropic Tool Use Guide** — full guide (overview → defining tools → tool use workflow → best practices) _(docs)_ — https://docs.anthropic.com/en/docs/build-with-claude/tool-use  · _Anthropic's tool-use paradigm — the other major API contract._
+### Sem 1 · The Augmented LLM Loop — ReAct, Planning & Reflection
+- **ReAct: Synergizing Reasoning and Acting in Language Models** · Yao et al. (ICLR 2023) — full paper _(paper)_ — https://arxiv.org/abs/2210.03629  · _The foundational agent-loop paper — read the primary source that defined the pattern._
+- **Reflexion: Language Agents with Verbal Reinforcement Learning** · Shinn et al. (NeurIPS 2023) — full paper _(paper)_ — https://arxiv.org/abs/2303.11366  · _The reflection pattern: self-critique + improvement loop — the second major agent pattern._
+- **Lilian Weng: LLM Powered Autonomous Agents** — full post _(reference)_ — https://lilianweng.github.io/posts/2023-06-23-agent/  · _The canonical survey: planning, memory, tool-use — the complete agent architecture picture._
+- **SWE-agent: Agent-Computer Interfaces** · Yang, Jimenez et al. (NeurIPS 2024) — sec. 1–3 (ACI design) _(reference)_ — https://arxiv.org/abs/2405.15793  · _The ACI insight: agents need purpose-built interfaces, not human UIs. A core architectural principle._
+- **Anthropic: Building Effective Agents** — full essay _(reference)_ — https://www.anthropic.com/engineering/building-effective-agents  · _Workflows vs agents — the most important architectural distinction. When simplicity wins._
 
-### Sem 1 · Tool Use — Building Agents That Act
-- **Anthropic: Writing Effective Tools for AI Agents** — full guide, especially best practices section _(docs)_ — https://docs.anthropic.com/en/docs/build-with-claude/tool-use  · _The primary reference for tool-design principles — written by the team defining the field._
-- **Hugging Face Agents Course — Unit 1: Introduction to Agents** — full unit _(course)_ — https://huggingface.co/learn/agents-course/unit1  · _Hands-on with smolagents: tool definition, agent initialization, first agent run._
-- **ReAct: Synergizing Reasoning and Acting in Language Models** · Yao et al. (ICLR 2023) — full paper _(paper)_ — https://arxiv.org/abs/2210.03629  · _The foundational paper — read the primary source that defined the pattern._
+### Sem 1 · Eval Foundations — The Engine of Improvement
+- **Hamel Husain: Your AI Product Needs Evals** — full post _(reference)_ — https://hamel.dev/blog/posts/evals/  · _The canonical eval essay — why evals matter and how to build them from day one._
+- **Hamel Husain: A Field Guide to Rapidly Improving AI Products** — full post _(reference)_ — https://hamel.dev/blog/posts/field-guide/  · _The eval-driven development loop — build, measure, analyze, improve, repeat._
+- **Anthropic: Evaluate Your Agent** — full guide _(docs)_ — https://docs.anthropic.com/en/docs/build-with-claude/evaluate  · _End-state eval, LLM-as-judge, human review — the production eval methodology from a frontier lab._
+- **Eugene Yan: An LLM-as-Judge Won't Save the Product** — full post _(reference)_ — https://eugeneyan.com/writing/llm-judge/  · _The limits of LLM-as-judge — when it works, when it doesn't, and why human review is non-negotiable._
+- **AI Engineering (Huyen)** — ch. 4 (evaluate AI systems) _(textbook, paid)_  · _The engineering textbook treatment of eval — metrics, test sets, error analysis._
 
-### Sem 1 · Agent Loops — ReAct, Reflection & Planning
-- **DeepLearning.AI: Agentic AI (Andrew Ng)** — full course (4 design patterns: reflection, tool use, planning, multi-agent) _(course)_ — https://www.deeplearning.ai/short-courses/agentic-ai/  · _Practical treatment of the four patterns with heavy eval emphasis — the canonical practitioner course._
-- **SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering** · Yang, Jimenez, Wettig, Lieret, Yao, Narasimhan, Press (NeurIPS 2024) — full paper — focus on ACI design (sec. 3) _(paper)_ — https://arxiv.org/abs/2405.15793  · _The ACI insight: LM agents need purpose-built interfaces. The most-imitated idea in coding agents._
-- **Hugging Face Agents Course — Unit 2: Agentic Patterns** — full unit _(course)_ — https://huggingface.co/learn/agents-course/unit2  · _Hands-on: tool use → planning → reflection patterns with smolagents._
+### Sem 1 · Tool Use & MCP — Connecting Agents to the World
+- **Anthropic Tool Use Guide** — full guide (overview → defining tools → tool use workflow → best practices) _(docs)_ — https://docs.anthropic.com/en/docs/build-with-claude/tool-use  · _The primary reference for tool-design principles — written by the team defining the field._
+- **OpenAI Function Calling Guide** — full guide _(docs)_ — https://platform.openai.com/docs/guides/function-calling  · _The other major API contract — understand both paradigms._
+- **Toolformer: Language Models Can Teach Themselves to Use Tools** · Schick et al. — full paper _(paper)_ — https://arxiv.org/abs/2302.04761  · _The foundational paper on tool use — how models learn to call APIs._
+- **Model Context Protocol (MCP) Specification** — specification + quickstart _(docs)_ — https://modelcontextprotocol.io  · _The de-facto standard for agent-tool integration — JSON-RPC, Resources/Tools/Prompts primitives. Required knowledge._
+- **ReAct (Yao et al.)** — tool-use sections (re-read with fresh eyes) _(paper)_ — https://arxiv.org/abs/2210.03629  · _Re-read the tool-use sections now that you understand the loop — see how tool design shapes loop behavior._
 
-### Sem 1 · Context Engineering & Memory
-- **Manus: Context Engineering for AI Agents — Lessons from Building Manus** · Yichao 'Peak' Ji — full article (six principles) _(reference)_ — https://manus.im/blog/context-engineering  · _The six principles from a production agent at scale (~50 tool calls/task avg). KV-cache hit rate as the single most important metric._
+### Sem 1 · Context Engineering & Memory — Where Reliability Is Won
+- **Manus: Context Engineering for AI Agents** · Yichao 'Peak' Ji — full article (six principles) _(reference)_ — https://manus.im/blog/context-engineering  · _The six principles from a production agent at scale — KV-cache hit rate as the single most important metric._
 - **Anthropic: Effective Context Engineering for AI Agents** — full guide _(docs)_ — https://docs.anthropic.com/en/docs/build-with-claude/context-window  · _The complementary practitioner treatment from the other major lab._
-- **LLMs Get Lost in Multi-Turn Conversation** · Laban, Hayashi et al. — abstract + results (sec. 3-4) _(paper)_ — https://arxiv.org/abs/2505.06120  · _Quantified context rot: 39% drop single-turn → multi-turn across 15 models. The empirical case for context engineering._
+- **MemGPT: Towards LLMs as Operating Systems** · Packer et al. — full paper _(paper)_ — https://arxiv.org/abs/2310.08560  · _The OS-analogy paper: virtual context management, interrupt-driven memory — the conceptual foundation._
+- **Anthropic: Effective Harnesses for Long-Running Agents** — full essay _(reference)_ — https://www.anthropic.com/engineering/effective-harnesses  · _How to build harnesses that support long-horizon agent runs — progress artifacts, checkpointing, initialization._
 
-### Sem 2 · RAG — Retrieval-Augmented Generation
-- **DeepLearning.AI: Building and Evaluating Advanced RAG** — full course _(course)_ — https://www.deeplearning.ai/short-courses/  · _Production-grade RAG from chunking to eval — the practitioner's guide._
-- **AI Engineering** · Chip Huyen — ch. 8-9 (RAG architecture, chunking, retrieval, reranking) _(textbook, paid)_  · _The engineering textbook treatment — architecture decisions and trade-offs._
-- **Hugging Face Agents Course — Agentic RAG Unit** — full unit _(course)_ — https://huggingface.co/learn/agents-course/unit3  · _RAG integrated as an agent tool — retrieval-augmented agent behavior._
+### Sem 1 · RAG & Retrieval Architecture — Grounding Agents in Data
+- **AI Engineering (Huyen)** — ch. 6 (RAG and agents — retrieval, reranking, agent-integrated RAG) _(textbook, paid)_  · _The engineering textbook treatment — architecture decisions and trade-offs, not just vector search._
+- **Jason Liu: RAG is More Than Embedding Search** — full post _(reference)_ — https://jxnl.co/writing/2024/05/10/rag-is-more-than-embedding-search/  · _The systems view: retrieval, reranking, evaluation — RAG as architecture, not a library call._
+- **Hugging Face Agents Course — Agentic RAG Unit** — full unit _(course)_ — https://huggingface.co/learn/agents-course/unit3  · _RAG integrated as an agent tool — the agent decides when to retrieve._
 
-### Sem 2 · Multi-Agent Orchestration
+### Sem 2 · Multi-Agent Orchestration — When to Scale Out
 - **Anthropic: How We Built Our Multi-Agent Research System** — full article _(reference)_ — https://www.anthropic.com/engineering/multi-agent-research-system  · _The defining multi-agent reference: orchestrator-worker, artifact pattern, rainbow deployments._
 - **Cognition: Don't Build Multi-Agents** — full article _(reference)_ — https://cognition.ai/blog/dont-build-multi-agents  · _The counter-argument: single context is more reliable for tightly coupled work. Read both sides._
 - **Cognition: Multi-Agents — What's Actually Working** — full article _(reference)_ — https://cognition.ai/blog/multi-agents-whats-working  · _Read-only subagents, MCP delegation, deliberate context isolation — the nuanced middle ground._
-- **DeepLearning.AI Agentic AI** — multi-agent pattern _(course)_  · _Andrew Ng's practical treatment of the pattern._
+- **Anthropic: When to Use Multi-Agent Systems (and When Not To)** — full essay _(reference)_ — https://www.anthropic.com/engineering/when-to-use-multi-agent  · _The decision framework: task structure, cost, reliability — when multi-agent is worth 15× tokens._
 
-### Sem 2 · Code-Execution & Computer-Use Agents
+### Sem 2 · Code-Execution & Computer-Use Agents — Agents That Act in Digital Worlds
 - **CodeAct: Executable Code as a Unified Action Space** · Wang et al. — full paper _(paper)_ — https://arxiv.org/abs/2402.01030  · _The paradigm: code as action space — increasingly outperforms JSON tool-calling._
-- **OpenHands (formerly OpenDevin) — Architecture & CodeAct Agent** — architecture docs + CodeAct agent source _(reference)_ — https://github.com/All-Hands-AI/OpenHands  · _Open platform: controller-agent-runtime with sandboxed execution. 65K+ GitHub stars._
-- **DeepLearning.AI: Building Code Agents with Hugging Face smolagents** · Thomas Wolf & Aymeric Roucher — full course _(course)_ — https://www.deeplearning.ai/short-courses/building-code-agents-with-smolagents/  · _Hands-on sandboxed code execution with E2B — the fastest path to a working code agent._
-- **Anthropic Computer Use Guide** — full guide + cookbook _(docs)_ — https://docs.anthropic.com/en/docs/build-with-claude/computer-use  · _The primary reference for computer-use agents — screenshots, clicks, typing._
+- **OpenHands Architecture & CodeAct Agent** — architecture docs + CodeAct agent source _(reference)_ — https://github.com/All-Hands-AI/OpenHands  · _Open platform: controller-agent-runtime with sandboxed execution. 65K+ GitHub stars._
+- **SWE-agent: Agent-Computer Interfaces (NeurIPS 2024)** · Yang, Jimenez et al. — full paper — focus on ACI design _(reference)_ — https://arxiv.org/abs/2405.15793  · _The ACI concept: purpose-built interfaces for agents. Mini-SWE-agent reaches >74% SWE-bench in ~100 lines._
+- **Anthropic Computer Use Guide** — full guide _(docs)_ — https://docs.anthropic.com/en/docs/build-with-claude/computer-use  · _The primary reference for computer-use agents — screenshots, clicks, typing._
+- **OpenAI Computer-Using Agent System Card** — full system card _(reference)_ — https://openai.com/index/computer-using-agent/  · _The other major computer-use paradigm — compare approaches._
 
-### Sem 2 · Evaluation, Observability & Safety
-- **Anthropic: Evaluate Your Agent** — full guide _(docs)_ — https://docs.anthropic.com/en/docs/build-with-claude/evaluate  · _End-state eval, LLM-as-judge, human review — the production eval methodology._
-- **Langfuse (OSS Observability)** — tracing + evaluation docs _(reference)_ — https://langfuse.com/docs  · _Leading open-source, MIT-licensed. Full-session trace capture for multi-step agent chains._
+### Sem 2 · Safety, Guardrails & Reliability — Capping the Blast Radius
+- **OWASP Top 10 for LLM Applications** — full list with descriptions _(reference)_ — https://owasp.org/www-project-top-10-for-large-language-model-applications/  · _The industry-standard threat model — every agent engineer should know these 10 risks._
+- **Simon Willison: Prompt Injection and the Lethal Trifecta** — series of posts _(reference)_ — https://simonwillison.net/series/prompt-injection/  · _The clearest explainer of prompt injection — why it's the hardest security problem in agent systems._
+- **Berkeley Advanced LLM Agents MOOC — Safety Lectures** — safety/guardrails lectures _(course)_ — https://rdi.berkeley.edu/advanced-agentic-ai/  · _Rigorous academic treatment of agent safety, alignment, and guardrails._
+- **Fin by Intercom: Safety Architecture** — escalation + safety sections _(reference)_ — https://www.intercom.com/blog/announcing-fin/  · _Production case study: escalation-to-human on low confidence, content safety filters, 99.97% uptime._
+
+### Sem 2 · Production Deployment & Cost Engineering — Shipping Reliable Agents
+- **AI Engineering (Huyen)** — ch. 9–10 (architecture, deployment, monitoring) _(textbook, paid)_  · _The production deployment chapters — what it takes to ship and maintain agent systems._
+- **Anthropic: Effective Harnesses for Long-Running Agents** — full essay _(reference)_ — https://www.anthropic.com/engineering/effective-harnesses  · _Checkpointing, progress artifacts, initialization — the patterns for long-horizon reliability._
+- **Manus: Context Engineering (production economics)** · Yichao 'Peak' Ji — KV-cache economics sections (re-read) _(reference)_ — https://manus.im/blog/context-engineering  · _The economics of running agents at scale — cost tracking, optimization, why Manus refused to fine-tune._
+- **"The Landscape of Agentic Reinforcement Learning for LLMs: A Survey"** · Zhang et al. — abstract + key results _(reference)_ — https://arxiv.org/abs/2509.02547  · _The SOTA map of agentic RL — when training agents beats prompting them._
+
+### Sem 2 · Observability & Trajectory Evals — Diagnosing Failure at Scale
+- **Langfuse Documentation** — tracing + evaluation docs _(reference)_ — https://langfuse.com/docs  · _Leading open-source, MIT-licensed. Full-session trace capture for multi-step agent chains._
+- **Hamel Husain: A Field Guide to Rapidly Improving AI Products** — full post (re-read with fresh eyes) _(reference)_ — https://hamel.dev/blog/posts/field-guide/  · _The eval-driven development loop — now with hands-on tracing experience._
+- **Shreya Shankar et al.: Who Validates the Validators?** — full paper _(reference)_ — https://arxiv.org/abs/2310.09335  · _LLM-as-judge validation — when the judge is wrong, and how to align it to human judgment._
 - **Hugging Face Agents Course — Observability & Eval Unit** — full unit _(course)_ — https://huggingface.co/learn/agents-course/unit4  · _Hands-on with Langfuse/OpenTelemetry for agent tracing and evaluation._
-- **Berkeley Advanced LLM Agents — Safety Lectures** — safety/guardrails lectures _(course)_ — https://rdi.berkeley.edu/advanced-agentic-ai/  · _Rigorous academic treatment of agent safety, alignment, and guardrails._
+- **τ-bench: A Benchmark for Tool-Agent-User Interaction** · Yao et al. (ICLR 2025) — abstract + benchmark design _(reference)_ — https://arxiv.org/abs/2406.12045  · _The canonical tool-use agent benchmark — what a real agent eval looks like._
 
-### Sem 2 · Production Deployment & Capstone
-- **AI Engineering** · Chip Huyen — ch. 13-15 (deployment, monitoring, continuous improvement) _(textbook, paid)_  · _The production deployment chapters — what it takes to ship and maintain._
-- **Anthropic: Building Effective Agents (eBook)** — full — Coinbase & Thomson Reuters case studies _(reference)_ — https://docs.anthropic.com/en/docs/build-with-claude/agent-patterns  · _Real enterprise case studies of agent deployment at scale._
+### Sem 2 · Capstone — Architecture Decision Record
+- **All course resources — this is synthesis, not new material** — revisit as needed _(reference)_  · _The capstone draws on everything: Huyen, Anthropic, Berkeley MOOC, Lilian Weng, Manus, Yao._

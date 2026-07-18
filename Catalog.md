@@ -5,4 +5,4 @@
 
 | Course | Credits | You'll be able to… | Units | Enroll |
 |---|---|---|---|---|
-| **AI Agent Engineering** | 4 | Design, build, evaluate, and deploy production-grade AI agent systems — from a single ReAct loop to multi-agent orchestrations — with the architectural judgment of a staff-level engineer | 12 | `enroll AG201` |
+| **AI Agent Engineering** | 4 | Design, evaluate, and deploy production-grade AI agent systems — from a single ReAct loop to multi-agent orchestrations — with the architectural judgment of a staff-level engineer who steers coding agents, not types every line | 13 | `enroll AG201` |
