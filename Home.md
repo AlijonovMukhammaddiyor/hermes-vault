@@ -13,10 +13,10 @@
 *The courses that ladder up to the objective above.*
 | Course | Status | Mastery |
 |---|---|---|
-| **AI Agent Engineering** | 🎯 placement | — |
+| **AI Agent Engineering** | 🟢 active | 0% |
 
-> [!todo] Blocked on you
-> - **AI Agent Engineering** — waiting for your placement exam → say `tailor AG201` to take it and skip what you already know
+> [!success] You're all caught up
+> Nothing is waiting on you right now.
 
 ## ✅ Today
 - [ ] Placement exam · AI Agent Engineering
