@@ -1,7 +1,7 @@
 # 📖 Resources — AG201 AI Agent Engineering
 
 ## Primary text
-- **AI Engineering: Building Applications with Foundation Models** · Chip Huyen — whole — ch. 4 (eval), ch. 5 (prompting), ch. 6 (RAG & agents), ch. 9–10 (architecture & deployment) _(textbook, paid)_ — https://www.oreilly.com/library/view/ai-engineering/9781098166309/  · _The single best prose-based textbook for this learner — concept-first, no code required, with the eval rigor and production architecture judgment that separates senior engineers. Read cover-to-cover._
+- **AI Engineering: Building Applications with Foundation Models** · Chip Huyen — whole — ch. 4 (eval), ch. 5 (prompting), ch. 6 (RAG & agents), ch. 9–10 (architecture & deployment). Local copy: Uploads/AG201/AI Engineering by Chip Huyen.md _(textbook, paid)_ — https://www.oreilly.com/library/view/ai-engineering/9781098166309/  · _The single best prose-based textbook for this learner — concept-first, no code required, with the eval rigor and production architecture judgment that separates senior engineers. Read cover-to-cover. Full markdown in vault._
 
 ## Course library
 - **UC Berkeley CS294/194-196: LLM Agents MOOC** · Dawn Song, Xinyun Chen — F24 foundations, Sp25 Advanced LLM Agents, F25 Agentic AI — full lecture videos on YouTube _(course)_ — https://llmagents-learning.org/  · _The definitive academic agent course — guest lectures from the researchers who defined the field. The structured spine for the whole course._
