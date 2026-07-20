@@ -10,7 +10,6 @@ kanban-plugin: board
 
 ## Today
 
-- [ ] **Placement exam · AI Agent Engineering** — Write answers in Exams/AG201/placement-u1.md <!--hu:o=u1.transformer;c=AG201;d=placement-->
 
 ## Doing
 
