@@ -6,10 +6,11 @@ kanban-plugin: board
 
 ## This Week
 
-- [ ] **Placement: LLM Foundations** — Explain the transformer from first principles — attention, Q/K/V, architecture, decoder-only rationale <!--hu:o=u1.transformer;c=AG201;d=placement-->
+- [ ] **Placement: LLM Foundations** <!--hu:o=u1.transformer;c=AG201;d=placement-->
 
 ## Today
 
+- [ ] **Explain the Transformer** <!--hu:o=u1.transformer;c=AG201;d=daily-->
 
 ## Doing
 

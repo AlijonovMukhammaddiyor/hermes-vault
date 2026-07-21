@@ -19,7 +19,7 @@
 > Nothing is waiting on you right now.
 
 ## ✅ Today
-- [ ] Placement exam · AI Agent Engineering
+- [ ] Explain the Transformer
 
 ---
 [[Board]] · [[Catalog]] · [[Guide]] · [[LearnerModel|What I know about you]] · [[Registrar/Transcript|Transcript]] · [[Registrar/DegreeProgress|Degree Progress]] · [[Registrar/Schedule|Schedule]]
