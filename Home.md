@@ -7,7 +7,7 @@
 > [!info] Where you are
 > Semester 1 · Week 1/12 · Standing: good
 
-> [!tip] Today's reads → [[Briefing/2026-07-20|2026-07-20]]
+> [!tip] Today's reads → [[Briefing/2026-07-21|2026-07-21]]
 
 ## 📚 Your curriculum
 *The courses that ladder up to the objective above.*
