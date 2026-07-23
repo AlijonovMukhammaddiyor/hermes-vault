@@ -10,7 +10,6 @@ kanban-plugin: board
 
 ## Today
 
-- [ ] **Explain the Transformer** <!--hu:o=u1.transformer;c=AG201;d=daily-->
 
 ## Doing
 
