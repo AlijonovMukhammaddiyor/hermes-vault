@@ -48,6 +48,28 @@
       "enrolled_on": null,
       "status": "active",
       "archived_on": null
+    },
+    "SD101": {
+      "title": "System Design Engineering",
+      "credits": 3,
+      "runs_in": [
+        1,
+        2
+      ],
+      "active": true,
+      "unit": null,
+      "unit_index": 0,
+      "activates_week": null,
+      "grade_weights": {
+        "hw": 0.3,
+        "quiz": 0.2,
+        "exam": 0.2,
+        "midterm": 0.1,
+        "finals": 0.2
+      },
+      "enrolled_on": null,
+      "status": "researching",
+      "archived_on": null
     }
   },
   "assessments": {
@@ -62,6 +84,11 @@
     "records": [
       {
         "code": "AG201",
+        "enrolled_on": "",
+        "dropped_on": null
+      },
+      {
+        "code": "SD101",
         "enrolled_on": "",
         "dropped_on": null
       }

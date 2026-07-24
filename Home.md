@@ -14,9 +14,10 @@
 | Course | Status | Mastery |
 |---|---|---|
 | **AI Agent Engineering** | 🟢 active | 0% |
+| **System Design Engineering** | 🔬 researching — waiting on you | — |
 
-> [!success] You're all caught up
-> Nothing is waiting on you right now.
+> [!todo] Blocked on you
+> - **System Design Engineering** — waiting for your research report → open `Uploads/SD101/RESEARCH-PROMPT.md`, run it in Claude, drop the report back
 
 ## ✅ Today
 - [ ] Explain the Transformer
