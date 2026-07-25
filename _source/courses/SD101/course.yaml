@@ -1,0 +1,31 @@
+id: SD101
+title: System Design Engineering
+subject_domain: general
+credits: 3
+north_star: Master system design for large-scale distributed systems — from fundamentals
+  to staff-level architectural judgment. Design systems like URL shorteners, chat
+  apps, news feeds, and real-time platforms with rigorous reasoning about tradeoffs,
+  scalability, and reliability.
+description: ''
+resources: []
+starting_tier: easy
+runs_in:
+- 1
+- 2
+active_default: true
+prerequisites: []
+enduring_understandings: []
+grading_scale:
+  A: 4.0
+  B: 3.0
+  C: 2.0
+  F: 0.0
+grade_weights:
+  hw: 0.3
+  quiz: 0.2
+  exam: 0.2
+  midterm: 0.1
+  finals: 0.2
+rubrics: []
+assessments: []
+units: []
