@@ -1,13 +1,32 @@
 {
- "outcomes": {},
- "topics": {},
+ "outcomes": {
+  "u1.transformer": {
+   "mastery_band": "F",
+   "fsrs": null,
+   "attempts": 1,
+   "last_seen": "2026-07-25T16:10:55.587093+00:00",
+   "misconceptions": []
+  }
+ },
+ "topics": {
+  "u1": {
+   "proficiency": 0.0,
+   "difficulty_ceiling": "easy",
+   "error_tags": [],
+   "attempts": 1
+  }
+ },
  "routine": {
-  "best_hours": [],
-  "adherence_by_slot": {}
+  "best_hours": [
+   "21:00-23:00"
+  ],
+  "adherence_by_slot": {
+   "21:00-23:00": 1
+  }
  },
  "pace": {
-  "task_cap_observed": 0,
-  "rest_day": null
+  "task_cap_observed": 1,
+  "rest_day": "Monday"
  },
  "preferences": {},
  "constraints": [],

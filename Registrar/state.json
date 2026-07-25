@@ -12,10 +12,10 @@
     "phase": "foundations"
   },
   "gpa": {
-    "semester": null,
-    "cumulative": null
+    "semester": 0.0,
+    "cumulative": 0.0
   },
-  "standing": "good",
+  "standing": "probation",
   "streak": {
     "current": 0,
     "longest": 0,
@@ -94,7 +94,7 @@
       }
     ]
   },
-  "hold": null,
+  "hold": "probation",
   "degree": {
     "name": "Hermes University Certificate of Mastery",
     "requirement": "pass finals of both 3-month semesters (>=B)",
