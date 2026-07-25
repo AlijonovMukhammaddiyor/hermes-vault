@@ -30,6 +30,7 @@ categories:
       - { title: "The Batch — DeepLearning.AI", url: "https://www.deeplearning.ai/the-batch/" }   # no RSS → fetch
 
   - name: "Systems, backend & engineering craft"
+    description: "Production systems, distributed architecture, backend patterns — the craft of building at scale."
     sources:
       - { title: "The Pragmatic Engineer — Gergely Orosz", url: "https://newsletter.pragmaticengineer.com/", rss: "https://newsletter.pragmaticengineer.com/feed", paid: true, weight: high }
       - { title: "ByteByteGo — Alex Xu", url: "https://blog.bytebytego.com/", rss: "https://blog.bytebytego.com/feed", weight: high }
@@ -40,6 +41,12 @@ categories:
       - { title: "Brendan Gregg", url: "https://www.brendangregg.com/blog/", rss: "https://www.brendangregg.com/blog/rss.xml" }
       - { title: "InfoQ", url: "https://www.infoq.com/", rss: "https://www.infoq.com/feed" }
       - { title: "The New Stack", url: "https://thenewstack.io/", rss: "https://thenewstack.io/feed/" }
+      - { title: "Stripe Engineering Blog", url: "https://stripe.com/blog/engineering", rss: "https://stripe.com/blog/engineering.rss" }
+      - { title: "Uber Engineering Blog", url: "https://www.uber.com/blog/engineering/", rss: "https://eng.uber.com/feed/" }
+      - { title: "Discord Engineering Blog", url: "https://discord.com/blog?category=engineering", rss: "https://discord.com/blog/rss.xml" }
+      - { title: "LinkedIn Engineering Blog", url: "https://engineering.linkedin.com/blog", rss: "https://engineering.linkedin.com/blog.rss" }
+      - { title: "Dropbox Tech Blog", url: "https://dropbox.tech/", rss: "https://dropbox.tech/feed" }
+      - { title: "Slack Engineering", url: "https://slack.engineering/", rss: "https://slack.engineering/feed" }
 
   - name: "General software engineering & languages"
     sources:

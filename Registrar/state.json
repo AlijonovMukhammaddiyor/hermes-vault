@@ -56,7 +56,7 @@
         1,
         2
       ],
-      "active": true,
+      "active": false,
       "unit": null,
       "unit_index": 0,
       "activates_week": null,
@@ -68,8 +68,8 @@
         "finals": 0.2
       },
       "enrolled_on": null,
-      "status": "researching",
-      "archived_on": null
+      "status": "archived",
+      "archived_on": "2026-07-24"
     }
   },
   "assessments": {
@@ -90,7 +90,7 @@
       {
         "code": "SD101",
         "enrolled_on": "",
-        "dropped_on": null
+        "dropped_on": "2026-07-24"
       }
     ]
   },
