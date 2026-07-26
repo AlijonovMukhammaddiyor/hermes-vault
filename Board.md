@@ -9,13 +9,13 @@ kanban-plugin: board
 
 ## Today
 
-- [ ] **Explain the Transformer 🔧** — Remediation — weak area, revisit u1.transformer proof gate <!--hu:o=u1.transformer;c=AG201;d=daily-->
 
 ## Doing
 
 
 ## Proof Pending
 
+- [ ] **Explain the Transformer 🔧** — Remediation — missed, rolling to tomorrow <!--hu:o=u1.transformer;c=AG201;d=daily-->
 
 ## Done
 
