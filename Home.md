@@ -19,8 +19,10 @@
 | **AI Agent Engineering** | 🟢 active | 0% |
 
 > [!todo] Blocked on you
-> - **Explain the Transformer** — proof needs rework
 > - hold: probation
+
+## ✅ Today
+- [ ] Explain the Transformer 🔧
 
 ---
 [[Board]] · [[Catalog]] · [[Guide]] · [[LearnerModel|What I know about you]] · [[Registrar/Transcript|Transcript]] · [[Registrar/DegreeProgress|Degree Progress]] · [[Registrar/Schedule|Schedule]]
