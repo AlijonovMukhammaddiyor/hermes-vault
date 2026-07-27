@@ -10,7 +10,7 @@
 > [!warning] On hold: probation
 > New material is paused until it clears.
 
-> [!tip] Today's reads → [[Briefing/2026-07-26|2026-07-26]]
+> [!tip] Today's reads → [[Briefing/2026-07-27|2026-07-27]]
 
 ## 📚 Your curriculum
 *The courses that ladder up to the objective above.*
@@ -19,8 +19,10 @@
 | **AI Agent Engineering** | 🟢 active | 0% |
 
 > [!todo] Blocked on you
-> - **Explain the Transformer 🔧** — proof needs rework
 > - hold: probation
+
+## ✅ Today
+- [ ] Explain the Transformer 🔧
 
 ---
 [[Board]] · [[Catalog]] · [[Guide]] · [[LearnerModel|What I know about you]] · [[Registrar/Transcript|Transcript]] · [[Registrar/DegreeProgress|Degree Progress]] · [[Registrar/Schedule|Schedule]]
