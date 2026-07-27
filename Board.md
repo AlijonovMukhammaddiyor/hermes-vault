@@ -9,13 +9,13 @@ kanban-plugin: board
 
 ## Today
 
+- [ ] **Explain the Transformer 🔧** <!--hu:o=u1.transformer;c=AG201;d=remediation-->
 
 ## Doing
 
 
 ## Proof Pending
 
-- [ ] **Explain the Transformer 🔧** — Remediation — missed, rolling to tomorrow <!--hu:o=u1.transformer;c=AG201;d=daily-->
 
 ## Done
 
