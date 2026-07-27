@@ -21,8 +21,5 @@
 > [!todo] Blocked on you
 > - hold: probation
 
-## ✅ Today
-- [ ] Explain the Transformer 🔧
-
 ---
 [[Board]] · [[Catalog]] · [[Guide]] · [[LearnerModel|What I know about you]] · [[Registrar/Transcript|Transcript]] · [[Registrar/DegreeProgress|Degree Progress]] · [[Registrar/Schedule|Schedule]]
