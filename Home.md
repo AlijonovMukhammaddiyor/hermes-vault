@@ -10,7 +10,7 @@
 > [!warning] On hold: probation
 > New material is paused until it clears.
 
-> [!tip] Today's reads → [[Briefing/2026-07-27|2026-07-27]]
+> [!tip] Today's reads → [[Briefing/2026-07-28|2026-07-28]]
 
 ## 📚 Your curriculum
 *The courses that ladder up to the objective above.*
