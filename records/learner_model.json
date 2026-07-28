@@ -3,9 +3,11 @@
   "u1.transformer": {
    "mastery_band": "F",
    "fsrs": null,
-   "attempts": 1,
-   "last_seen": "2026-07-25T16:10:55.587093+00:00",
-   "misconceptions": []
+   "attempts": 3,
+   "last_seen": "2026-07-28T16:14:34.254460+00:00",
+   "misconceptions": [
+    "u1"
+   ]
   }
  },
  "topics": {
@@ -14,6 +16,22 @@
    "difficulty_ceiling": "easy",
    "error_tags": [],
    "attempts": 1
+  },
+  "Attention from First Principles": {
+   "proficiency": 0.0,
+   "difficulty_ceiling": "easy",
+   "error_tags": [
+    "u1"
+   ],
+   "attempts": 1
+  },
+  "Transformer Forward Pass": {
+   "proficiency": 0.0,
+   "difficulty_ceiling": "easy",
+   "error_tags": [
+    "u1"
+   ],
+   "attempts": 1
   }
  },
  "routine": {
@@ -21,11 +39,11 @@
    "21:00-23:00"
   ],
   "adherence_by_slot": {
-   "21:00-23:00": 1
+   "21:00-23:00": 3
   }
  },
  "pace": {
-  "task_cap_observed": 1,
+  "task_cap_observed": 2,
   "rest_day": "Monday"
  },
  "preferences": {},
