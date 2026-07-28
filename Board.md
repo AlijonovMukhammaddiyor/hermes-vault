@@ -6,10 +6,11 @@ kanban-plugin: board
 
 ## This Week
 
-- [ ] **Explain the Transformer 🔧** <!--hu:o=u1.transformer;c=AG201;d=remediation-->
 
 ## Today
 
+- [ ] **Attention from First Principles 🧠** <!--hu:o=u1.transformer;c=AG201;d=remediation-->
+- [ ] **Transformer Forward Pass 🔧** <!--hu:o=u1.transformer;c=AG201;d=remediation-->
 
 ## Doing
 
