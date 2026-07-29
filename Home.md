@@ -21,5 +21,9 @@
 > [!todo] Blocked on you
 > - hold: probation
 
+## ✅ Today
+- [ ] Attention from First Principles 🧠
+- [ ] Transformer Forward Pass 🔧
+
 ---
 [[Board]] · [[Catalog]] · [[Guide]] · [[LearnerModel|What I know about you]] · [[Registrar/Transcript|Transcript]] · [[Registrar/DegreeProgress|Degree Progress]] · [[Registrar/Schedule|Schedule]]
