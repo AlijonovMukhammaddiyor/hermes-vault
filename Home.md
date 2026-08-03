@@ -5,10 +5,7 @@
 > 0% mastered so far — everything below serves this one goal.
 
 > [!info] Where you are
-> Semester 1 · Week 1/12 · Standing: probation · GPA 0.00 (cum 0.00)
-
-> [!warning] On hold: probation
-> New material is paused until it clears.
+> Semester 1 · Week 1/12 · Standing: good · GPA 0.00 (cum 0.00)
 
 > [!tip] Today's reads → [[Briefing/2026-08-03|2026-08-03]]
 
@@ -18,12 +15,8 @@
 |---|---|---|
 | **AI Agent Engineering** | 🟢 active | 0% |
 
-> [!todo] Blocked on you
-> - hold: probation
-
-## ✅ Today
-- [ ] Attention from First Principles 🧠
-- [ ] Transformer Forward Pass 🔧
+> [!success] You're all caught up
+> Nothing is waiting on you right now.
 
 ---
 [[Board]] · [[Catalog]] · [[Guide]] · [[LearnerModel|What I know about you]] · [[Registrar/Transcript|Transcript]] · [[Registrar/DegreeProgress|Degree Progress]] · [[Registrar/Schedule|Schedule]]

@@ -1,6 +1,6 @@
 # 🎓 Transcript — Mukhammaddiyor
 
-**Standing:** probation  ·  **Semester GPA:** 0.00  ·  **Cumulative GPA:** 0.00
+**Standing:** good  ·  **Semester GPA:** 0.00  ·  **Cumulative GPA:** 0.00
 
 | Course | Credits | Records | Course GPA |
 |---|---|---|---|
