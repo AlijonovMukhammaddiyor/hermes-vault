@@ -7,7 +7,7 @@
 > [!info] Where you are
 > Semester 1 · Week 1/12 · Standing: good · GPA 0.00 (cum 0.00)
 
-> [!tip] Today's reads → [[Briefing/2026-08-08|2026-08-08]]
+> [!tip] Today's reads → [[Briefing/2026-08-09|2026-08-09]]
 
 ## 📚 Your curriculum
 *The courses that ladder up to the objective above.*
