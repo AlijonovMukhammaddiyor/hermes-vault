@@ -4,6 +4,6 @@
 
 **Outcomes mastered:** 0/13  (0%)
 **Semester:** 1/2 · week 1/12
-**Credits enrolled:** 7  ·  **Cumulative GPA:** 0.00  ·  **Standing:** good
+**Credits enrolled:** 7  ·  **Cumulative GPA:** 0.00  ·  **Standing:** probation
 
 **What's left:** 13 outcomes across your enrolled courses, then the semester finals (≥B) to promote/graduate.
